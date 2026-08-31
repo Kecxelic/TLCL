@@ -13,8 +13,7 @@ ready to download and use. At the time of this writing, the Debian repository
 
 在这一章中，我们将看一下如何通过编译源代码来创建程序。源代码的可用性是至关重要的自由，从而使得 Linux 成为可能。
 整个 Linux 开发生态圈就是依赖于开发者之间的自由交流。对于许多桌面用户来说，编译是一种失传的艺术。以前很常见，
-但现在，由系统发行版提供商维护巨大的预编译的二进制仓库，准备供用户下载和使用。在写这篇文章的时候，
-Debian 仓库（最大的发行版之一）包含了几乎23,000个预编译的包。
+但现在，由系统发行版提供商维护巨大的预编译的二进制仓库，准备供用户下载和使用。在写这篇文章的时候，Debian 仓库（最大的发行版之一）包含了几乎23,000个预编译的包。
 
 So why compile software? There are two reasons:
 
@@ -77,10 +76,7 @@ and MOV (for move). Programs written in assembly language are processed into
 machine language by a program called an assembler. Assembly language is
 still used today for certain specialized programming tasks, such as device drivers and embedded systems.
 
-这些指令中的每一条都是用二进制表示的（1和0）。最早的计算机程序就是用这种数值编码写成的，这可能就
-解释了为什么编写它们的程序员据说吸很多烟，喝大量咖啡，并带着厚厚的眼镜。随着汇编语言的出现，这个问题得到克服。
-汇编语言使用诸如CPY（复制）和 MOV（移动）之类（略微）易用的字符助记符代替了数值编码 。用汇编语言编写的程序通过
-汇编器处理为机器语言。今天为了完成某些特定的程序任务，汇编语言仍在被使用，例如设备驱动和嵌入式系统。
+这些指令中的每一条都是用二进制表示的（1和0）。最早的计算机程序就是用这种数值编码写成的，这可能就解释了为什么编写它们的程序员据说吸很多烟，喝大量咖啡，并带着厚厚的眼镜。随着汇编语言的出现，这个问题得到克服。汇编语言使用诸如CPY（复制）和 MOV（移动）之类（略微）易用的字符助记符代替了数值编码 。用汇编语言编写的程序通过汇编器处理为机器语言。今天为了完成某些特定的程序任务，汇编语言仍在被使用，例如设备驱动和嵌入式系统。
 
 We next come to what are called high-level programming languages.
 They are called this because they allow the programmer to be less
