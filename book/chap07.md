@@ -14,7 +14,7 @@ we will introduce the following commands:
 以下命令：
 
 
-* cat - Concatenate files
+* cat - [[Concatenate]] files
 
 * sort - Sort lines of text
 
@@ -46,7 +46,7 @@ we will introduce the following commands:
 
 * tee - 从标准输入读取数据，并同时写到标准输出和文件
 
-### 标准输入、标准输出和标准错误输出
+### 标准输入stdin、标准输出stdout和标准错误输出stderr
 
 Many of the programs that we have used so far produce output of some kind. This output
 often consists of two types. First, we have the program's results; that is, the data the
@@ -79,7 +79,7 @@ redirection, we can change that.
 I/O 重定向允许我们更改输出地点和输入来源。一般来说，输入来自键盘，输出送到屏幕，
 但是通过 I/O 重定向，我们可以做出改变。
 
-### 标准输出重定向
+### 标准输出重定向符>和>>
 
 I/O redirection allows us to redefine where standard output goes. To redirect standard
 output to another file besides the screen, we use the ">" redirection operator followed by

@@ -1,3 +1,11 @@
+---
+type: book
+书名: The Linux Command Line(Linux 命令行)
+主题: 编程工具
+作者: William Shotts
+语言: 英文
+---
+
 # The Linux Command Line（中文版）目录
 
 > 来源：[TLCL 原站点](http://billie66.github.com/TLCL/index.html)，正文为同目录下的 `chapXX.md` 文件。
