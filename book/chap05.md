@@ -55,7 +55,7 @@ manager. Pretty easy with the command line:
 
     cp -u *.html destination
 
-### 通配符
+# 通配符
 
 Before we begin using our commands, we need to talk about a shell feature that
 makes these commands so powerful. Since the shell uses filenames so much, it
@@ -338,7 +338,7 @@ desktop so powerful.
 > 最初源于命令行界面中的想法，在图形界面中也适用。这就是 Linux 桌面系统
 如此强大的众多原因之一。
 
-### mkdir - 创建目录
+# mkdir - 创建目录
 
 The mkdir command is used to create directories. It works like this:
 
@@ -365,7 +365,7 @@ would create three directokries named "dir1", "dir2", "dir3".
 
 会创建三个目录，名为 dir1, dir2, dir3。
 
-### cp - 复制文件和目录
+# cp - 复制文件和目录
 
 The cp command copies files or directories. It can be used two different ways:
 
@@ -383,7 +383,7 @@ to copy multiple items (either files or directories) into a directory.
 
 复制多个项目（文件或目录）到一个目录下。
 
-### 有用的选项和实例
+# 有用的选项和实例
 
 Here are some of the commonly used options (the short option and the equivalent long option) for cp:
 
@@ -532,7 +532,7 @@ dir2 必须已经存在。</td>
 </tr>
 </table>
 
-### mv - 移动和重命名文件
+# mv - 移动和重命名文件
 
 The mv command performs both file moving and file renaming, depending on how it is used.
 In either case, the original filename no longer exists after the operation.
@@ -553,7 +553,7 @@ to move one or more items from one directory to another.
 
 把一个或多个条目从一个目录移动到另一个目录中。
 
-### 有用的选项和实例
+# 有用的选项和实例
 
 mv shares many of the same options as cp:
 
@@ -658,7 +658,7 @@ directory dir2.</td>
 </tr>
 </table>
 
-### rm - 删除文件和目录
+# rm - 删除文件和目录
 
 The rm command is used to remove(delete)files and directories:
 
@@ -670,7 +670,7 @@ where "item" is one or more files or directories.
 
 "item"代表一个或多个文件或目录。
 
-### 有用的选项和实例
+# 有用的选项和实例
 
 Here are some of the common options for rm:
 
@@ -825,7 +825,7 @@ replace the ls with rm.
 先用 ls 命令来测试通配符。这会让你看到将要被删除的文件是什么。然后按下上箭头按键，重新调用
 刚刚执行的命令，用 rm 替换 ls。
 
-### ln — 创建链接
+# ln — 创建链接
 
 The ln command is used to create either hard or symbolic links. It is used in one of two
 ways:
@@ -844,7 +844,7 @@ to create a symbolic link where "item" is either a file or a directory.
 
 创建符号链接，"item" 可以是一个文件或是一个目录。
 
-### 硬链接
+# 硬链接
 
 Hard links are the original Unix way of creating links; symbolic links are
 more modern. By default, every file has a single hard link that gives the file
@@ -879,7 +879,7 @@ time, but modern practice prefers symbolic links, which we will cover next.
 直到所有关联这个文件的链接都删除掉。知道硬链接很重要，因为你可能有时
 会遇到它们，但现在实际中更喜欢使用符号链接，下一步我们会讨论符号链接。
 
-### 符号链接
+# 符号链接
 
 Symbolic links were created to overcome the limitations of hard links. Symbolic links
 work by creating a special type of file that contains a text pointer to the referenced file or
@@ -912,7 +912,7 @@ this stuff and it will, hopefully, become clear.
 关于链接的概念，看起来很迷惑，但不要胆怯。我们将要努力地练习
 这些命令而且尽可能得使它变得清晰。
 
-### 创建游戏场（实战演习）
+# 创建游戏场（实战演习）
 
 Since we are going to do some real file manipulation, let's build a safe place to “play”
 with our file manipulation commands. First we need a directory to work in. We'll create
@@ -922,7 +922,7 @@ one in our home directory and call it “playground.”
 来玩一下文件操作命令。首先，我们需要一个工作目录。在我们的
 家目录下创建一个叫做“playground”的目录。
 
-### 创建目录
+# 创建目录
 
 The mkdir command is used to create a directory. To create our playground
 directory we will first make sure we are in our home directory and will then
@@ -949,7 +949,7 @@ both directories with a single command.
 
 注意到 mkdir 命令可以接受多个参数，它允许我们用一个命令来创建这两个目录。
 
-###　复制文件
+#　复制文件
 
 Next, let's get some data into our playground. We'll do this by copying a file. Using the
 cp command, we'll copy the passwd file from the /etc directory to the current
@@ -998,7 +998,7 @@ will cause cp to leave the file alone.
 
 在提示信息后输入"y"，文件就会被覆盖，输入其它的字符（例如，"n"） cp 命令会保留原文件。
 
-### 移动和重命名文件
+# 移动和重命名文件
 
 Now, the name “passwd” doesn't seem very playful and this is a playground,
 so let's change it to something else:
@@ -1056,7 +1056,7 @@ mv 会把 dir1 重命名为 dir2。最后，让我们把所有的东西放回原
     [me@linuxbox playground]$ mv dir2/dir1 .
     [me@linuxbox playground]$ mv dir1/fun .
 
-### 创建硬链接
+# 创建硬链接
 
 Now we'll try some links. First the hard links. We’ll create some links to our data file
 like so:
@@ -1127,7 +1127,7 @@ they are the same file.
 在这个版本的列表中，第一字段表示文件索引节点号，正如我们所见到的，
 fun 和 fun-hard 共享一样的索引节点号，这就证实这两个文件是同一个文件。
 
-### 创建符号链接
+# 创建符号链接
 
 Symbolic links were created to overcome the two disadvantages of hard links: hard links
 cannot span physical devices and hard links cannot reference directories, only files.
@@ -1194,7 +1194,7 @@ In addition to regular files, symbolic links can also reference directories:
     total 16
     ...省略
 
-### 移动文件和目录
+# 移动文件和目录
 
 As we covered earlier, the rm command is used to delete files and directories. We are
 going to use it to clean up our playground a little bit. First, let's delete one of our hard
@@ -1289,7 +1289,7 @@ copying, moving, or linking the file.
 复制（或移动）文件。在 KDE 中，无论什么时候放下一个文件，会弹出一个小菜单，
 这个菜单会提供复制，移动，或创建链接文件选项。
 
-### 总结
+# 总结
 
 We've covered a lot of ground here and it will take a while to fully sink in. Perform the
 playground exercise over and over until it makes sense. It is important to get a good

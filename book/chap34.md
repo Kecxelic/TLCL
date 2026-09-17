@@ -16,7 +16,7 @@ In modern versions of bash, for is available in two forms.
 
 实现一个 for 循环，很自然的，要用 for 命令。在现代版的 bash 中，有两种可用的 for 循环格式。
 
-### for: 传统 shell 格式
+# for: 传统 shell 格式
 
 The original for command’s syntax is:
 
@@ -170,7 +170,7 @@ It also led to the following Fortran-based witticism:
 >
 > “神是实数，除非是声明的整数。”
 
-### for: C 语言格式
+# for: C 语言格式
 
 Recent versions of bash have added a second form of for command syntax, one that
 resembles the form found in the C programming language. Many other languages support
@@ -235,7 +235,7 @@ several applications for this in the next two chapters.
 
 C 语言格式的 for 循环对于需要一个数字序列的情况是很有用处的。我们将在接下来的两章中看到几个这样的应用实例。
 
-### 总结
+# 总结
 
 With our knowledge of the for command, we will now apply the final improvements to
 our sys_info_page script. Currently, the report_home_space function looks
@@ -298,7 +298,7 @@ made use of printf to format some of the output.
 设置了一些随后会在 for 循环中用到的变量，来取代在 if 语句块内执行完备的动作集合。我们给
 函数添加了几个本地变量，并且使用 printf 来格式化输出。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Advanced Bash-Scripting Guide has a chapter on loops, with a variety of examples using for:
 

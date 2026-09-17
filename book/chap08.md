@@ -14,7 +14,7 @@ complex features of the shell, we will do it with just one new command:
 
 * echo － 显示一行文本
 
-### (字符)展开
+# (字符)展开
 
 Each time you type a command line and press the enter key, bash performs several
 processes upon the text before it carries out your command. We have seen a couple of
@@ -62,7 +62,7 @@ expanded result. Knowing this, we can see that echo behaved as expected.
 所以 echo 命令的实际参数并不是"\*"，而是它展开后的结果。知道了这个以后，
 我们就能明白 echo 的行为符合预期。
 
-### 路径名展开
+# 路径名展开
 
 The mechanism by which wildcards work is called pathname expansion. If we try some
 of the techniques that we employed in our earlier chapters, we will see that they are really
@@ -161,7 +161,7 @@ option (“almost all”) will provide a correct listing of hidden files:
 >
 >  _ls -A_
 
-### 波浪线展开
+# 波浪线展开
 
 As you may recall from our introduction to the cd command, the tilde character (“~”) has
 a special meaning. When used at the beginning of a word, it expands into the name of the
@@ -181,7 +181,7 @@ If user “foo” has an account, then:
     [me@linuxbox ~]$ echo ~foo
     /home/foo
 
-### 算术表达式展开
+# 算术表达式展开
 
 The shell allows arithmetic to be performed by expansion. This allow us to use the shell
 prompt as a calculator:
@@ -306,7 +306,7 @@ Arithmetic expansion is covered in greater detail in Chapter 35.
 
 在35章会更深入地讨论算术表达式的内容。
 
-### 花括号展开
+# 花括号展开
 
 Perhaps the strangest expansion is called brace expansion. With it, you can create
 multiple text strings from a pattern containing braces. Here's an example:
@@ -372,7 +372,7 @@ Pretty slick!
 
 棒极了！
 
-### 参数展开
+# 参数展开
 
 We're only going to touch briefly on parameter expansion in this chapter, but we'll be
 covering it extensively later. It's a feature that is more useful in shell scripts than directly
@@ -409,7 +409,7 @@ echo 命令只简单地显示误键入的字符串。但在参数展开中，如
 
     [me@linuxbox ~]$
 
-### 命令替换
+# 命令替换
 
 Command substitution allows us to use the output of a command as an expansion:
 
@@ -453,7 +453,7 @@ bash 也支持这种语法。它使用倒引号来代替美元符号和括号：
     [me@linuxbox ~]$ ls -l `which cp`
     -rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp
 
-### 引用
+# 引用
 
 Now that we've seen how many ways the shell can perform expansions, it's time to learn
 how we can control it. Take for example:
@@ -480,7 +480,7 @@ provides a mechanism called quoting to selectively suppress unwanted expansions.
 参数展开把 `$1` 的值替换为一个空字符串，因为 `1` 是没有定义的变量。shell 提供了一种
 叫做引用的机制，来有选择地禁止不需要的展开。
 
-### 双引号
+# 双引号
 
 The first type of quoting we will look at is double quotes. If you place text
 inside double quotes, all the special characters used by the shell lose their
@@ -581,7 +581,7 @@ includes the embedded spaces and newlines.
 在第一个例子，没有引用的命令替换导致命令行包含38个参数。在第二个例子中，
 命令行只有一个参数，参数中包括嵌入的空格和换行符。
 
-### 单引号
+# 单引号
 
 If we need to suppress all expansions, we use single quotes. Here is a comparison of
 unquoted, double quotes, and single quotes:
@@ -600,7 +600,7 @@ are suppressed.
 
 正如我们所看到的，随着引用程度加强，越来越多的展开被禁止。
 
-### 转义字符
+# 转义字符
 
 Sometimes we only want to quote a single character. To do this, we can precede a
 character with a backslash, which in this context is called the escape character. Often
@@ -683,7 +683,7 @@ we can create a primitive countdown timer:
 >  _sleep 10; echo \"Time\'s up\" $\'\a\'_
 
 
-### 总结归纳
+# 总结归纳
 
 As we move forward with using the shell, we will find that expansions and quoting will
 be used with increasing frequency, so it makes sense to get a good understanding of the
@@ -696,7 +696,7 @@ be a source of mystery and confusion, and much of it potential power wasted.
 如果没有准确地理解展开模式，shell 总是神秘和混乱的源泉，并且 shell 潜在的能力也
 浪费掉了。
 
-### 拓展阅读
+# 拓展阅读
 
 * The bash man page has major sections on both expansion and quoting which
   cover these topics in a more formal manner.

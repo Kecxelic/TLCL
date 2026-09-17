@@ -78,7 +78,7 @@ the following commands:
 
 * passwd – 更改用户密码
 
-### 拥有者、组成员和其他人
+# 拥有者、组成员和其他人
 
 When we were exploring the system back in Chapter 4, we may have encountered a
 problem when trying to examine a file such as /etc/shadow:
@@ -165,7 +165,7 @@ the user. This makes certain types of permission assignment easier.
 会创建一个独一无二的，只有一个成员的用户组，这个用户组与用户同名。这样使某种类型的
 权限分配更容易些。
 
-### 读取、写入和执行
+# 读取、写入和执行
 
 Access rights to files and directories are defined in terms of read access, write access, and
 execution access. If we look at the output of the ls command, we can get some clue as
@@ -394,7 +394,7 @@ Here are some examples of file attribute settings:
 </tr>
 </table>
 
-### chmod － 更改文件模式
+# chmod － 更改文件模式
 
 To change the mode (permissions) of a file or directory, the chmod command is used.
 Be aware that only the file’s owner or the superuser can change the mode of a file or
@@ -658,7 +658,7 @@ permissions.
 它可以同时作用于文件和目录，所以它并不是如我们期望的那么有用处，因为我们很少希望文件和
 目录拥有同样的权限。
 
-### 借助 GUI 来设置文件模式
+# 借助 GUI 来设置文件模式
 
 Now that we have seen how the permissions on files and directories are set, we can better
 understand the permission dialogs in the GUI. In both Nautilus (GNOME) and
@@ -682,7 +682,7 @@ command line!
 在 KDE 中，右击"Advanced Permissions"按钮，会打开另一个对话框，这个对话框允许
 你单独设置各个模式属性。这也可以通过命令行来理解！
 
-### umask － 设置默认权限
+# umask － 设置默认权限
 
 The umask command controls the default permissions given to a file when it is created.
 It uses octal notation to express a mask of bits to be removed from a file's mode
@@ -862,7 +862,7 @@ Here are some examples. First, a program that is setuid:
 >
 >  _drwxrwxrwt_
 
-### 更改身份
+# 更改身份
 
 At various times, we may find it necessary to take on the identity of another user. Often
 we want to gain superuser privileges to carry out some administrative task, but it is also
@@ -903,7 +903,7 @@ either one or the other. We'll start with su.
 执行这些命令。选择使用哪个命令，很大程度上是由你使用的 Linux 发行版来决定的。
 你的发行版可能这两个命令都包含，但系统配置可能会禁用其中一个。我们先介绍 su 命令。
 
-### su － 以其他用户身份和组 ID 运行一个 shell
+# su － 以其他用户身份和组 ID 运行一个 shell
 
 The su command is used to start a shell as another user. The command syntax looks like
 this:
@@ -966,7 +966,7 @@ shell, but rather in the new shell:
     total 0
     [me@linuxbox ~]$
 
-### sudo － 以另一个用户身份执行命令
+# sudo － 以另一个用户身份执行命令
 
 The sudo command is like su in many ways, but has some important additional
 capabilities. The administrator can configure sudo to allow an ordinary user to execute
@@ -1061,7 +1061,7 @@ similar powers to subsequent user accounts.
 到 root 帐号（因为不能为 root 帐号设置密码），而是使用 sudo 命令授予普通用户超级用户权限。
 通过 sudo 命令，最初的用户可以拥有超级用户权限，也可以授予随后的用户帐号相似的权力。
 
-### chown － 更改文件所有者和用户组
+# chown － 更改文件所有者和用户组
 
 The chown command is used to change the owner and group owner of a file or directory.
 Superuser privileges are required to use this command. The syntax of chown looks like
@@ -1161,7 +1161,7 @@ runs out.
 注意，第一次使用 sudo 命令之后，为什么（shell）没有提示 janet 输入她的密码？这是因为，在
 大多数的配置中，sudo 命令会相信你几分钟，直到计时结束。
 
-### chgrp － 更改用户组所有权
+# chgrp － 更改用户组所有权
 
 In older versions of Unix, the chown command only changed file ownership, not group
 ownership. For that purpose, a separate command, chgrp was used. It works much the
@@ -1170,7 +1170,7 @@ same way as chown, except for being more limited.
 在旧版 Unix 系统中，chown 命令只能更改文件所有权，而不是用户组所有权。为了达到目的，
 使用一个独立的命令，chgrp 来完成。除了限制多一点之外，chgrp 命令与 chown 命令使用起来很相似。
 
-### 练习使用权限
+# 练习使用权限
 
 Now that we have learned how this permissions thing works, it's time to show
 it off. We are going to demonstrate the solution to a common problem — setting
@@ -1300,7 +1300,7 @@ umask permanent.
 剩下一个问题是关于 umask 命令的。umask 命令设置的掩码值只能在当前 shell 会话中生效，若当前 shell
 会话结束后，则必须重新设置。在这本书的第三部分，我们将看一下，怎样使掩码值永久生效。
 
-### 更改用户密码
+# 更改用户密码
 
 The last topic we'll cover in this chapter is setting passwords for yourself (and for other
 users if you have access to superuser privileges.) To set or change a password, the
@@ -1345,7 +1345,7 @@ passwd man page for details.
 用户的密码。还有其它的 passwd 命令选项对超级用户有效，允许帐号锁定，密码失效，等等。
 详细内容，参考 passwd 命令的手册页。
 
-### 拓展阅读
+# 拓展阅读
 
 * Wikipedia has a good article on malware:
 

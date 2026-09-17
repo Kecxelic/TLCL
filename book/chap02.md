@@ -10,12 +10,12 @@ program from the GNU Project called bash. The name “bash” is an acronym for
 “Bourne Again SHell”, a reference to the fact bash is an enhanced replacement
 for sh, the original Unix shell program written by Steve Bourne.
 
-一说到命令行，我们真正指的是 shell。shell 就是一个程序，它接受从键盘输入的命令，
-然后把命令传递给操作系统去执行。几乎所有的 Linux 发行版都提供一个名为 bash 的
-来自 GNU 项目的 shell 程序。“bash” 是 “Bourne Again SHell” 的首字母缩写，
+一说到命令行，我们真正指的是 shell。**shell 就是一个程序**，它接受从键盘输入的命令，
+然后把命令传递给操作系统去执行。几乎所有的 Linux 发行版都提供一个**名为 bash 的**
+**来自 GNU 项目的 shell 程序**。“bash” 是 “Bourne Again SHell” 的首字母缩写，
 是最初在 Unix 上由 Steve Bourne 写成 shell 程序 sh 的增强版。
 
-### 终端仿真器
+# 终端仿真器_terminal_shell一般只用键盘
 
 When using a graphical user interface, we need another program called a
 terminal emulator to interact with the shell. If we look through our desktop
@@ -26,13 +26,13 @@ basically do the same thing; give us access to the shell. You will probably
 develop a preference for one or another based on the number of bells and
 whistles it has.
 
-当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。
+当使用图形用户界面时，我们需要另一个和 shell 交互的叫做**终端仿真器**的程序。
 如果我们浏览一下桌面菜单，可能会找到一个。虽然在菜单里它可能都
 被简单地称为 “terminal”。 KDE 用的是 konsole ,  GNOME 则使用 gnome-terminal。
 还有其他一些终端仿真器可供 Linux 使用，但基本上，它们都完成同样的事情，
-让我们能访问 shell。也许，你可能会因为它附加的一系列花俏功能而喜欢上某个终端仿真器。
+**让我们能访问 shell**。也许，你可能会因为它附加的一系列花俏功能而喜欢上某个终端仿真器。
 
-### 第一次按键
+# 第一次按键
 
 So let's get started. Launch the terminal emulator! Once it comes up, we should see somehing like this:
 
@@ -50,12 +50,14 @@ sign.
 它可能会以各种各样的面孔显示，这则取决于不同的 Linux 发行版，
 它通常包括你的用户名@主机名，紧接着当前工作目录（稍后会有更多介绍）和一个美元符号。
 
+## `#`符标识root权限`$`普通权限
+
 If the last character of the prompt is a pound sign (“#”) rather than a dollar
 sign, the terminal session has superuser privileges. This means either we are
 logged in as the root user or we selected a terminal emulator that provides
 superuser (administrative) privileges.
 
-如果提示符的最后一个字符是“#”, 而不是“$”, 那么这个终端会话就有超级用户权限。
+如果**提示符的最后一个字符是“#”, 而不是“$”, 那么这个终端会话就有超级用户权限**。
 这意味着，我们要么是以 root 用户的身份登录，要么是我们选择的终端仿真器提供超级用户（管理员）权限。
 
 Assuming that things are good so far, let's try some typing. Type some
@@ -74,7 +76,7 @@ another chance:
     bash: kaekfjaeifj: command not found
     [me@linuxbox ~]$
 
-### 命令历史
+# 上箭头按键看历史命令
 
 If we press the up-arrow key, we will see that the previous command “kaekfjaeifj”
 reappears after the prompt. This is called command history. Most Linux distributions
@@ -85,7 +87,7 @@ previous command disappears.
 这就叫做命令历史。许多 Linux 发行版默认保存最后输入的500个命令。
 按下下箭头按键，先前输入的命令就消失了。
 
-### 移动光标
+# 左右箭头按键移动光标
 
 Recall the previous command with the up-arrow key again. Now try the left and right-arrow keys.
 See how we can position the cursor anywhere on the command line? This makes editing commands easy.
@@ -93,7 +95,7 @@ See how we can position the cursor anywhere on the command line? This makes edit
 可借助上箭头按键，来获得上次输入的命令。现在试着使用左右箭头按键。
 看一下怎样把光标定位到命令行的任意位置？使用箭头按键可以使编辑命令变得轻松些。
 
-### 关于鼠标和光标
+# 复制粘贴
 
 While the shell is all about the keyboard, you can also use a mouse with your
 terminal emulator. There is a mechanism built into the X Window System (the
@@ -103,7 +105,7 @@ dragging the mouse over it (or double clicking on a word), it is copied into a
 buffer maintained by X. Pressing the middle mouse button will cause the text to
 be pasted at the cursor location. Try it.
 
-虽然，shell 是和键盘打交道的，但你也可以在终端仿真器里使用鼠标。X 窗口系统
+虽然，shell 是和键盘打交道的，但你也**可以在终端仿真器里使用鼠标**。X 窗口系统
 （使 GUI 工作的底层引擎）内建了一种机制，支持快速拷贝和粘贴技巧。
 如果你按下鼠标左键，沿着文本拖动鼠标（或者双击一个单词）高亮了一些文本，
 那么这些高亮的文本就被拷贝到了一个由 X 管理的缓冲区里面。然后按下鼠标中键，
@@ -135,7 +137,7 @@ window manager.
 设置聚焦策略为“聚焦跟随着鼠标”，可以使拷贝和粘贴更方便易用。尝试一下。
 我想如果你试了一下你会喜欢上它的。你能在窗口管理器的配置中找到这个设置。
 
-### 试试运行一些简单命令
+# 简单命令date、cal、df、free
 
 Now that we have learned to type, let's try a few simple commands. The first one is
 date. This command displays the current time and date.
@@ -161,7 +163,7 @@ A related command is cal which, by default, displays a calendar of the current m
 
 To see the current amount of free space on your disk drives, type df:
 
-查看磁盘剩余空间的数量，输入 df:
+查看磁盘剩余空间的数量diskfree，输入 df:
 
     [me@linuxbox ~]$ df
     Filesystem           1K-blocks      Used Available Use% Mounted on
@@ -181,7 +183,7 @@ Likewise, to display the amount of free memory, type the free command.
     -/+ buffers/cache:     441860    1617816
     Swap:      1042428          0    1042428
 
-### 结束终端会话
+# 结束终端会话exit
 
 We can end a terminal session by either closing the terminal emulator window, or by
 entering the exit command at the shell prompt:
@@ -190,7 +192,7 @@ entering the exit command at the shell prompt:
 
     [me@linuxbox ~]$ exit
 
-### 幕后控制台
+# 虚拟终端
 
 Even if we have no terminal emulator running, several terminal sessions
 continue to run behind the graphical desktop. Called virtual terminals or
@@ -200,13 +202,13 @@ is accessed, it presents a login prompt into which we can enter our user name
 and password.  To switch from one virtual console to another, press Alt and
 F1-F6. To return to the graphical desktop, press Alt-F7.
 
-即使终端仿真器没有运行，在后台仍然有几个终端会话运行着。它们叫做虚拟终端
-或者是虚拟控制台。在大多数 Linux 发行版中，这些终端会话都可以通过按下
+即使终端仿真器没有运行，在后台仍然有几个终端会话运行着。它们叫做**虚拟终端**
+或者是**虚拟控制台**。在大多数 Linux 发行版中，这些终端会话都可以通过按下
 Ctrl-Alt-F1 到 Ctrl-Alt-F6 访问。当一个会话被访问的时候，
 它会显示登录提示框，我们需要输入用户名和密码。要从一个虚拟控制台转换到另一个，
 按下 Alt 和 F1-F6(中的一个)。返回图形桌面，按下 Alt-F7。
 
-### 拓展阅读
+# 拓展阅读
 
 To learn more about Steve Bourne, father of the Bourne Shell, see this
 Wikipedia article:

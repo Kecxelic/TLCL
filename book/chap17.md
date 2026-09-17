@@ -81,14 +81,14 @@ and some may require superuser privileges to execute.
 
 ---
 
-### 检查和监测网络
+# 检查和监测网络
 
 Even if you’re not the system administrator, it’s often helpful to examine the performance
 and operation of a network.
 
 即使你不是一名系统管理员，检查一个网络的性能和运作情况也是经常有帮助的。
 
-#### ping
+## ping
 
 The most basic network command is ping. The ping command sends a special
 network packet called an ICMP ECHO_REQUEST to a specified host. Most network
@@ -146,7 +146,7 @@ interface cards, cabling, routing and gateways) are in generally good working or
 零个数据包丢失。一个成功执行的“ping”命令会意味着网络的各个部件（网卡，电缆，路由，网关）
 都处于正常的工作状态。
 
-#### traceroute
+## traceroute
 
 The traceroute program (some systems use the similar tracepath program
 instead) displays a listing of all the “hops” network traffic takes to get
@@ -188,7 +188,7 @@ etc.), we see asterisks as in the line for hop number two.
 此路由器的往返时间样本。对于那些没有提供标识信息的路由器（由于路由器配置，网络拥塞，防火墙等
 方面的原因），我们会看到几个星号，正如行中所示。
 
-#### netstat
+## netstat
 
 The netstat program is used to examine various network settings and statistics.
 Through the use of its many options, we can look at a variety of features in our network
@@ -273,7 +273,7 @@ Check out the netstat man page for a complete list.
 netstat 程序有许多选项，我们仅仅讨论了几个。查看 netstat 命令的手册，可以
 得到所有选项的完整列表。
 
-### 网络中传输文件
+# 网络中传输文件
 
 What good is a network unless we know how to move files across it? There are many
 programs that move data over networks. We will cover two of them now and several
@@ -282,7 +282,7 @@ more in later sections.
 如果不能通过网络来传输文件，那么要网络有什么用呢？有许多程序可以用来在网络中
 传送数据。我们先讨论两个，随后的章节里再介绍几个。
 
-#### ftp
+## ftp
 
 One of the true “classic” programs, ftp gets it name from the protocol it uses, the File
 Transfer Protocol. FTP is used widely on the Internet for file downloads. Most, if not
@@ -444,7 +444,7 @@ many ordinary file management tasks. It’s clumsy, but it does work.
 授予了用户足够权限的服务器中，则可以执行很多普通的文件管理任务。虽然很笨拙，
 但它真能工作。
 
-#### lftp - 更好的 ftp
+## lftp - 更好的 ftp
 
 ftp is not the only command line FTP client. In fact, there are many. One of better (and
 more popular) ones is lftp by Alexander Lukyanov. It works much like the traditional
@@ -456,7 +456,7 @@ ftp 并不是唯一的命令行形式的 FTP 客户端。实际上，还有很�
 由 Alexander Lukyanov 编写完成。虽然 lftp 工作起来与传统的 ftp 程序很相似，但是它带有额外的便捷特性，包括
 多协议支持（包括 HTTP），若下载失败会自动地重新下载，后台处理，用 tab 按键来补全路径名，还有很多。
 
-#### wget
+## wget
 
 Another popular command line program for file downloading is wget. It is useful for
 downloading content from both web and FTP sites. Single files, multiple files, and even
@@ -487,7 +487,7 @@ better-than-average man page.
 这个程序的许多选项允许 wget 递归地下载，在后台下载文件（你退出后仍在下载），能完成未下载
 全的文件。这些特性在其优秀的命令手册中有着详尽地说明。
 
-### 与远程主机安全通信
+# 与远程主机安全通信
 
 For many years, Unix-like operating systems have had the ability to be administered
 remotely via a network. In the early days, before the general adoption of the Internet,
@@ -502,7 +502,7 @@ Internet age.
 一样的致命缺点；它们以明码形式来传输所有的交流信息（包括登录命令和密码）。这使它们完全不
 适合使用在因特网时代。
 
-#### ssh
+## ssh
 
 To address this problem, a new protocol called SSH (Secure Shell) was developed. SSH
 solves the two basic problems of secure communication with a remote host. First, it
@@ -734,7 +734,7 @@ option rather than the “-X” option to do this.
 > 这个 xload 命令在远端执行之后，它的窗口就会出现在本地。在某些系统中，你可能需要
 使用 “－Y” 选项，而不是 “－X” 选项来完成这个操作。
 
-#### scp 和 sftp
+## scp 和 sftp
 
 The OpenSSH package also includes two programs that can make use of an SSH
 encrypted tunnel to copy files across the network. The first, scp (secure copy) is used
@@ -825,7 +825,7 @@ for the scp and sftp programs.
 >
 > PuTTY 可在链接 <http://www.chiark.greenend.org.uk/~sgtatham/putty/> 处得到。
 
-### 拓展阅读
+# 拓展阅读
 
 * For a broad (albeit dated) look at network administration, the Linux
   Documentation Project provides the Linux Network Administrator’s Guide:

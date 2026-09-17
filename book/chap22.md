@@ -35,7 +35,7 @@ programs that we will cover in this chapter include:
 
 * groff – 一个文件格式化系统
 
-### 简单的格式化工具
+# 简单的格式化工具
 
 We’ll look at some of the simple formatting tools first. These are mostly single purpose
 programs, and a bit unsophisticated in what they do, but they can be used for small tasks
@@ -44,7 +44,7 @@ and as parts of pipelines and scripts.
 我们将先着眼于一些简单的格式工具。他们都是功能单一的程序，并且做法有一点单纯，
 但是他们能被用于小任务并且作为脚本和管道的一部分 。
 
-#### nl - 添加行号
+## nl - 添加行号
 
 The nl program is a rather arcane tool used to perform a simple task. It numbers lines.
 In its simplest use, it resembles cat -n:
@@ -308,7 +308,7 @@ and
 
     nl -w 3 -s ' '
 
-#### fold - 限制文件行宽
+## fold - 限制文件行宽
 
 Folding is the process of breaking lines of text at a specified width. Like our other
 commands, fold accepts either one or more text files or standard input. If we send
@@ -341,7 +341,7 @@ fold to break the line at the last available space before the line width is reac
     the lazy
     dog.
 
-#### fmt - 一个简单的文本格式器
+## fmt - 一个简单的文本格式器
 
 The fmt program also folds text, plus a lot more. It accepts either files or standard input
 and performs paragraph formatting on the text stream. Basically, it fills and joins lines in
@@ -453,7 +453,7 @@ that do not begin with the specified prefix are preserved.
 
 注意相邻的注释行被合并了，空行和非注释行被保留了。
 
-#### pr – 格式化打印文本
+## pr – 格式化打印文本
 
 The pr program is used to paginate text. When printing text, it is often desirable to separate
 the pages of output with several lines of whitespace, to provide a top and bottom
@@ -496,7 +496,7 @@ at more of them in the next chapter.
 
 在上面的例子中，我们用 -l 选项（页长）和 -w 选项（页宽）定义了宽65列，长15行的一个“页面”。 pr 为 distros.txt 中的内容编订页码，用空行分开各页面，生成了包含文件修改时间、文件名、页码的默认页眉。 pr 指令拥有很多调整页面布局的选项，我们将在下一章中进一步探讨。
 
-#### printf – Format And Print Data
+## printf – Format And Print Data
 
 Unlike the other commands in this chapter, the printf command is not used for pipelines
 (it does not accept standard input) nor does it find frequent application directly on
@@ -864,8 +864,8 @@ formatting a tiny web page:
     </body>
     </html>
 
-### Document Formatting Systems
-### 文件格式化系统
+# Document Formatting Systems
+# 文件格式化系统
 So far, we have examined the simple text-formatting tools. These are good for small, simple tasks, but what about larger jobs? One of the reasons that Unix became a popular operating
 system among technical and scientific users (aside from providing a powerful
 multitasking, multiuser environment for all kinds of software development) is that it offered
@@ -930,7 +930,7 @@ editor.
 
 ---
 
-#### groff
+## groff
 
 groff is a suite of programs containing the GNU implementation of troff. It also includes
 a script that is used to emulate nroff and the rest of the roff family as well.
@@ -1160,7 +1160,7 @@ view the resulting output, we get a much more satisfying result:
 Figure 5: Viewing The Finished Table
 图5：查看生成的表格
 
-### Summing Up
+# Summing Up
 
 Given that text is so central to the character of Unix-like operating systems, it makes
 sense that there would be many tools that are used to manipulate and format text. As we
@@ -1169,13 +1169,13 @@ scripts that produce short documents, while groff (and friends) can be used to w
 books. We may never write a technical paper using command line tools (though there are
 many people who do!), but it’s good to know that we could.
 
-### 小节
+# 小节
 
 文本是 类 Unix 系统的核心特性，一定会有许多修改和格式化文本的工具。正如我们所看到的那样，的确很多！像 fmt 和 pr 这种比较简单的格式化工具会在
 生成比较短的文件时发挥很多用途，而 groff 和其他工具则会在写书的时候用上。我们也许永远不会用命令行工具来写一篇技术文章（尽管有很多人在这么做！），
 但是知道我们可以这么做也是极好的。
 
-### Further Reading
+# Further Reading
 
 * groff User’s Guide
 
@@ -1201,7 +1201,7 @@ many people who do!), but it’s good to know that we could.
 
   <http://en.wikipedia.org/wiki/Typesetting>
 
-### 阅读更多
+# 阅读更多
 
 * groff 用户指南
 

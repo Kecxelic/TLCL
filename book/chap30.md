@@ -23,7 +23,7 @@ looping. We will look at two of them in this chapter, and the third in a later o
 在这一章中，我们将看一个叫做循环的程序概念，其可用来使程序的某些部分重复。shell 为循环提供了三个复合命令。
 本章我们将查看其中的两个命令，随后章节介绍第三个命令。
 
-### 循环
+# 循环
 
 Daily life is full of repeated activities. Going to work each day, walking the dog, slicing
 a carrot are all tasks that involve repeating a series of steps. Let’s consider slicing a
@@ -68,7 +68,7 @@ condition, “entire carrot sliced,” is reached.
 
 从第四步到第七步形成一个循环。重复执行循环内的动作直到满足条件“切完整个胡萝卜”。
 
-#### while
+## while
 
 bash can express a similar idea. Let’s say we wanted to display five numbers in
 sequential order from one to five. a bash script could be constructed as follows:
@@ -174,7 +174,7 @@ the loop terminates and execution continues with the line following `done`.
  sleep 命令，所以在清空屏幕和重新显示菜单之前，程序将会停顿几秒钟，为的是能够看到选项输出结果。
 一旦 REPLY 等于“0”，则表示选择了“退出”选项，循环就会终止，程序继续执行 done 语句之后的代码。
 
-### 跳出循环
+# 跳出循环
 
 bash provides two builtin commands that can be used to control program flow inside
 loops. The `break` command immediately terminates a loop, and program control
@@ -251,7 +251,7 @@ chosen and identified, there is no reason to test for the other selections.
 来提高程序执行的效率。通过使用 continue 命令，当一个选项确定后，程序会跳过不需执行的其他代码。例如，
 如果选择了选项"1"，则没有理由去测试其它选项。
 
-#### until
+## until
 
 The `until` command is much like `while`, except instead of exiting a loop when a non-
 zero exit status is encountered, it does the opposite. An `until` loop continues until it
@@ -279,7 +279,7 @@ matter of choosing the one that allows the clearest `test` to be written.
 通过把 test 表达式更改为 $count -gt 5 ， until 会在正确的时间终止循环。至于使用 while 循环
 还是 until 循环，通常是选择其 test 判断条件最容易写的那种。
 
-### 使用循环读取文件
+# 使用循环读取文件
 
 `while` and `until` can process standard input. This allows files to be processed with
 `while` and `until` loops. In the following example, we will display the contents of the
@@ -323,7 +323,7 @@ variables created or assigned within the loop will be lost when the loop termina
 这里我们接受 sort 命令的标准输出，然后显示文本流。然而，因为管道将会在子 shell 中执行
 循环，当循环终止的时候，循环中创建的任意变量或赋值的变量都会消失，记住这一点很重要。
 
-### 总结
+# 总结
 
 With the introduction of loops, and our previous encounters with branching, subroutines
 and sequences, we have covered the major types of flow control used in programs. bash
@@ -332,7 +332,7 @@ has some more tricks up its sleeve, but they are refinements on these basic conc
 通过引入循环和我们之前遇到的分支、子例程和序列，我们已经介绍了程序流程控制的主要类型。
 bash 还有一些锦囊妙计，但它们都是关于这些基本概念的完善。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Bash Guide for Beginners from the Linux Documentation Project has some
 more examples of while loops:

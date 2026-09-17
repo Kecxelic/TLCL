@@ -42,7 +42,7 @@ And the file synchronization program:
 
 * rsync – 同步远端文件和目录
 
-### 压缩文件
+# 压缩文件
 
 Throughout the history of computing, there has been a struggle to get the most data into
 the smallest available space, whether that space be memory, storage devices or network
@@ -96,7 +96,7 @@ tolerate any data loss.
 它与原文件不相匹配; 相反，它是一个近似值。有损压缩的例子有 JPEG（图像）文件和 MP3（音频）文件。
 在我们的讨论中，我们将看看完全无损压缩，因为计算机中的大多数数据是不能容忍丢失任何数据的。
 
-#### gzip
+## gzip
 
 The gzip program is used to compress one or more files. When executed, it replaces the
 original file with a compressed version of the original. The corresponding gunzip
@@ -293,7 +293,7 @@ _小贴士:_ 还有一个 zless 程序。它与上面的管道线有相同的功
 
 ---
 
-#### bzip2
+## bzip2
 
 The bzip2 program, by Julian Seward, is similar to gzip, but uses a different
 compression algorithm that achieves higher levels of compression at the cost of
@@ -348,7 +348,7 @@ savings to offset the additional overhead.
 此次压缩过程的信息。如果你试图压缩一个已经不包含多余信息的文件，那么再次压缩不会节省
 空间，以抵消额外的花费。
 
-### 归档文件
+# 归档文件
 
 A common file management task used in conjunction with compression is archiving.
 Archiving is the process of gathering up many files and bundling them together into a
@@ -359,7 +359,7 @@ when old data is moved from a system to some type of long-term storage.
 捆绑成一个大文件的过程。归档经常作为系统备份的一部分来使用。当把旧数据从一个系统移到某
 种类型的长期存储设备中时，也会用到归档程序。
 
-#### tar
+## tar
 
 In the Unix-like world of software, the tar program is the classic tool for archiving files.
 Its name, short for tape archive, reveals its roots as a tool for making backup tapes.
@@ -695,7 +695,7 @@ standard input (again, the f option with the dash argument).
 发送到本地系统的标准输出（通过f选项和“-”）。在本地系统中，我们执行 tar 命令抽取（x模式）
 标准输入提供的归档文件（再次的，通过f选项和“-”）。
 
-#### zip
+## zip
 
 The zip program is both a compression tool and an archiver. The file format used by
 the program is familiar to Windows users, as it reads and writes .zip files. In Linux,
@@ -846,7 +846,7 @@ greatly preferred.
 并且包含了有用的实例。然而，这些程序的主要用途是为了和 Windows 系统交换文件，
 而不是在 Linux 系统中执行压缩和打包操作，tar 和 gzip 程序在 Linux 系统中更受欢迎。
 
-### 同步文件和目录
+# 同步文件和目录
 
 A common strategy for maintaining a backup copy of a system involves keeping one or
 more directories synchronized with another directory (or directories) located on either the
@@ -984,7 +984,7 @@ the job.
 
 现在我们所做的事情就是连接外部驱动器，然后运行 backup 命令来完成工作。
 
-#### 在网络间使用 rsync 命令
+## 在网络间使用 rsync 命令
 
 One of the real beauties of rsync is that it can be used to copy files over a network.
 After all, the “r” in rsync stands for “remote.” Remote copying can be done in one of
@@ -1043,7 +1043,7 @@ followed by the pathname of the repository.
 在这个例子里，我们使用了远端 rsync 服务器的 URI，其由协议（rsync://），远端主机名
 （rsync.gtlib.gatech.edu），和软件仓库的路径名组成。
 
-### 拓展阅读
+# 拓展阅读
 
 * The man pages for all of the commands discussed here are pretty clear and
   contain useful examples. In addition, the GNU Project has a good online manual

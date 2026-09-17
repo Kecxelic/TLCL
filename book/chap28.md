@@ -27,7 +27,7 @@ This is an example of a branch. Based on the condition, “Does X = 5?” do one
 这就是一个分支的例子。根据条件，“Does X = 5?” 做一件事情，“Say X equals 5,”
 否则，做另一件事情，“Say X is not equal to 5.”
 
-### if
+# if
 
 Using the shell, we can code the logic above as follows:
 
@@ -79,7 +79,7 @@ failure of a command.
 这里的 commands 是指一系列命令。第一眼看到会有点儿困惑。但是在我们弄清楚这些语句之前，我们
 必须看一下 shell 是如何评判一个命令的成功与失败的。
 
-### 退出状态
+# 退出状态
 
 Commands (including the scripts and shell functions we write) issue a value to the system
 when they terminate, called an exit status. This value, which is an integer in the range of
@@ -152,7 +152,7 @@ evaluated:
     [me@linuxbox ~]$ if true; false; then echo "It's true."; fi
     [me@linuxbox ~]$
 
-### 测试
+# 测试
 
 By far, the command used most frequently with if is test. The test command
 performs a variety of checks and comparisons. It has two equivalent forms:
@@ -175,7 +175,7 @@ when the expression is false.
 这里的 expression 是一个表达式，其执行结果是 true 或者是 false。当表达式为真时，这个 test 命令返回一个零
 退出状态，当表达式为假时，test 命令退出状态为1。
 
-#### 文件表达式
+## 文件表达式
 
 The following expressions are used to evaluate the status of files:
 
@@ -461,7 +461,7 @@ and get the desired behavior:
         fi
     }
 
-#### 字符串表达式
+## 字符串表达式
 
 The following expressions are used to evaluate strings:
 
@@ -591,7 +591,7 @@ is no answer.” 重定向到标准错误，这是处理错误信息的“正确
 字符串的值，看看它是否等于“yes,” "no," 或者“maybe”。为此使用了 elif，它是 “else if” 的简写。
 通过使用 elif，我们能够构建更复杂的逻辑测试。
 
-#### 整型表达式
+## 整型表达式
 
 The following expressions are used with integers:
 
@@ -694,7 +694,7 @@ and returns the remainder, it can tell if the number is odd or even.
 这个脚本中有趣的地方是怎样来确定一个整数是偶数还是奇数。通过用模数2对数字执行求模操作，
 就是用数字来除以2，并返回余数，从而知道数字是偶数还是奇数。
 
-### 更现代的测试版本
+# 更现代的测试版本
 
 Recent versions of bash include a compound command that acts as an enhanced
 replacement for test. It uses the following syntax:
@@ -767,7 +767,7 @@ This makes `[[ ]]` useful for evaluating file and path names.
 
 这就使`[[ ]]`有助于计算文件和路径名。
 
-### (( )) - 为整数设计
+# (( )) - 为整数设计
 
 In addition to the `[[ ]]` compound command, bash also provides the `(( ))`
 compound command, which is useful for operating on integers. It supports a full set of
@@ -825,7 +825,7 @@ related arithmetic expansion further in Chapter 35.
 所以它能够通过名字识别出变量，而不需要执行展开操作。我们将在第35章中进一步讨论 `(( ))` 命令
 和相关的算术展开操作。
 
-### 结合表达式
+# 结合表达式
 
 It’s also possible to combine expressions to create more complex evaluations.
 Expressions are combined by using logical operators. We saw these in Chapter 18, when
@@ -981,7 +981,7 @@ portable.
 在所有类型的系统中安装 bash 和其它的 GNU 工具，甚至是 Windows，而没有损失。所以就
 感觉可以自由的使用 bash 的所有功能。它是真正的可移植。
 
-### 控制操作符：分支的另一种方法
+# 控制操作符：分支的另一种方法
 
 bash provides two control operators that can perform branching. The `&& (AND)` and `|| (OR)` operators
 work like the logical operators in the `[[ ]]` compound command. This
@@ -1036,7 +1036,7 @@ terminate with an exit status of one.
 
 如果这个脚本要求目录 temp，且目录不存在，然后脚本会终止，并返回退出状态1。
 
-### 总结
+# 总结
 
 We started this chapter with a question. How could we make our `sys_info_page`
 script detect if the user had permission to read all the home directories? With our
@@ -1078,7 +1078,7 @@ our work.
 我们将暂别 `sys_info_page` 程序，但不要着急。它还会回来。同时，当我们继续工作的时候，
 将会讨论一些我们需要的话题。
 
-### 拓展阅读
+# 拓展阅读
 
 There are several sections of the bash man page that provide further detail on the topics
 covered in this chapter:

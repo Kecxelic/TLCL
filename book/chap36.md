@@ -18,7 +18,7 @@ Even so, they can be very useful for solving programming problems.
 在本章中，我们将看看另一种数据结构叫做数组，数组能存放多个值。数组几乎是所有编程语言的一个特性。
 shell 也支持它们，尽管以一个相当有限的形式。即便如此，为解决编程问题，它们是非常有用的。
 
-### 什么是数组？
+# 什么是数组？
 
 Arrays are variables that hold more than one value at a time. Arrays are organized like a table.
 Let’s consider a spreadsheet as an example. A spreadsheet acts like a two-dimensional array.
@@ -48,7 +48,7 @@ The original Unix shell program, sh, did not support arrays at all.
 Bash 中的数组仅限制为单一维度。我们可以把它们看作是只有一列的电子表格。尽管有这种局限，但是有许多应用使用它们。
 对数组的支持第一次出现在 bash 版本2中。原来的 Unix shell 程序，sh，根本就不支持数组。
 
-### 创建一个数组
+# 创建一个数组
 
 Array variables are named just like other bash variables,
 and are created automatically when they are accessed. Here is an example:
@@ -79,7 +79,7 @@ Using the -a option, this example of declare creates the array a.
 
 使用 -a 选项，declare 命令的这个例子创建了数组 a。
 
-### 数组赋值
+# 数组赋值
 
 Values may be assigned in one of two ways. Single values may be assigned using the fol-
 lowing syntax:
@@ -117,7 +117,7 @@ value:
 
     [me@linuxbox ~]$ days=([0]=Sun [1]=Mon [2]=Tue [3]=Wed [4]=Thu [5]=Fri [6]=Sat)
 
-### 访问数组元素
+# 访问数组元素
 
 So what are arrays good for? Just as many data-management tasks can be performed with
 a spreadsheet program, many programming tasks can be performed with arrays.
@@ -219,14 +219,14 @@ the final tally of files.
 
 脚本的最后一部分显示数组中的内容。我们首先输出两行标题，然后进入一个循环产生两栏输出。最后，输出总共的文件数目。
 
-### 数组操作
+# 数组操作
 
 There are many common array operations. Such things as deleting arrays, determining
 their size, sorting, etc. have many applications in scripting.
 
 有许多常见的数组操作。比方说删除数组，确定数组大小，排序，等等。有许多脚本应用程序。
 
-#### 输出整个数组的内容
+## 输出整个数组的内容
 
 The subscripts * and @ can be used to access every element in an array.
 As with positional parameters, the @ notation is the more useful of the two.
@@ -266,7 +266,7 @@ in three words, which matches the arrays “real” contents.
 我们创建了数组 animals，并把三个含有两个字的字符串赋值给数组。然后我们执行四个循环看一下对数组内容进行分词的效果。
 表示法 ${animals[*]} 和 ${animals[@]}的行为是一致的直到它们被用引号引起来。
 
-#### 确定数组元素个数
+## 确定数组元素个数
 
 Using parameter expansion, we can determine the number of elements in an array in
 much the same way as finding the length of a string. Here is an example:
@@ -291,7 +291,7 @@ the array (elements 0-99) would be initialized with empty values and counted.
 bash 仅仅报告数组中有一个元素。这不同于一些其它语言的行为，这种行为是数组中未使用的元素（元素0-99）会初始化为空值，
 并把它们计入数组长度。
 
-#### 找到数组使用的下标
+## 找到数组使用的下标
 
 As bash allows arrays to contain “gaps” in the assignment of subscripts, it is sometimes
 useful to determine which elements actually exist. This can be done with a parameter ex-
@@ -320,7 +320,7 @@ the @ form enclosed in quotes is the most useful, as it expands into separate wo
     4
     6
 
-#### 在数组末尾添加元素
+## 在数组末尾添加元素
 
 Knowing the number of elements in an array is no help if we need to append values to the
 end of an array, since the values returned by the * and @ notations do not tell us the maxi-
@@ -339,7 +339,7 @@ we assign three values to the array foo, and then append three more.
     [me@linuxbox~]$ echo ${foo[@]}
     a b c d e f
 
-#### 数组排序
+## 数组排序
 
 Just as with spreadsheets, it is often necessary to sort the values in a column of data. The
 shell has no direct way of doing this, but it's not hard to do with a little coding:
@@ -370,7 +370,7 @@ pipeline.
 脚本运行成功，通过使用一个复杂的命令替换把原来的数组（a）中的内容复制到第二个数组（a_sorted）中。
 通过修改管道线的设计，这个基本技巧可以用来对数组执行各种各样的操作。
 
-#### 删除数组
+## 删除数组
 
 To delete an array, use the unset command:
 
@@ -421,7 +421,7 @@ Any reference to an array variable without a subscript refers to element zero of
     [me@linuxbox~]$ echo ${foo[@]}
     A b c d e f
 
-### 关联数组
+# 关联数组
 
 Recent versions of bash now support associative arrays. Associative arrays use strings
 rather than integers as array indexes. This capability allow interesting new approaches to
@@ -452,7 +452,7 @@ produce an interesting report.
 
 在下一章中，我们将看一个脚本，很好地利用关联数组，生产出了一个有意思的报告。
 
-### 总结
+# 总结
 
 If we search the bash man page for the word “array,” we find many instances of where
 bash makes use of array variables. Most of these are rather obscure,
@@ -477,7 +477,7 @@ form of loop is particularly well-suited to calculating array subscripts.
 
 形式的循环尤其适合计算数组下标。
 
-### 拓展阅读
+# 拓展阅读
 
 * A couple of Wikipedia articles about the data structures found in this chapter:
 

@@ -43,13 +43,13 @@ We will discuss the following commands:
 
 * cancel —— 取消打印任务（System V）
 
-### 打印简史
+# 打印简史
 
 To fully understand the printing features found in Unix-like operating systems, we must first learn some history. Printing on Unix-like systems goes way back to the beginning of the operating system itself. In those days, printers and how they were used were much different from how they are today.
 
 为了较好的理解类 Unix 操作系统中的打印功能，我们必须先了解一些历史。类 Unix 系统中的打印可追溯到操作系统本身的起源，那时候打印机和它的用法与今天截然不同。
 
-#### 早期的打印
+## 早期的打印
 
 Like the computers themselves, printers in the pre-PC era tended to be large, expensive, and centralized. The typical computer user of 1980 worked at a terminal connected to a computer some distance away. The printer was located near the computer and was under the watchful eyes of the computer's operators.
 
@@ -59,7 +59,7 @@ When printers were expensive and centralized, as they often were in the early da
 
 由于当时打印机既昂贵又集中，而且都工作在早期的 Unix 环境下，人们从实际考虑通常都会多人共享一台打印机。为了区别不同用户的打印任务，每个打印任务的开头都会打印一张写着用户名字的标题页，然后计算机工作人员会用推车装好当天的打印任务并分发给每个用户。
 
-#### 基于字符的打印机
+## 基于字符的打印机
 
 The printer technology of the '80s was very different in two respects. First, printers of that period were almost always impact printers. Impact printers use a mechanical mechanism that strikes a ribbon against the paper to form character impressions on the page. Two of the popular technologies of that time were daisy-wheel printing and dot-matrix printing.
 
@@ -88,7 +88,7 @@ Data is sent to a typewriter-like printer in a simple stream of bytes containing
 
 ^H（ctrl-H）字符是用于打印粗体效果的退格符。同样，我们还可以看到用于打印下划线效果的[退格/下划线]序列。
 
-#### 图形化打印机
+## 图形化打印机
 
 The development of GUIs led to major changes in printer technology. As computers moved to more picture-based displays, printing moved from character-based to graphical techniques. This was facilitated by the advent of the low-cost laser printer, which, instead of printing fixed characters, could print tiny dots anywhere in the printable area of the page. This made printing proportional fonts (like those used by typesetters), and even photographs and high-quality diagrams, possible.
 
@@ -122,7 +122,7 @@ Many printers today still accept character-based streams, but many low-cost prin
 
 现在的许多打印机仍能接受基于字符的字节流，但很多廉价的打印机却不支持，因为它们依赖于主机的 RIP 提供的比特流来作为点阵打印。当然也有不少仍旧是 PostScript 打印机。
 
-### 在 Linux 下打印
+# 在 Linux 下打印
 
 Modern Linux systems employ two software suites to perform and manage printing. The first, CUPS (Common Unix Printing System), provides print drivers and print-job management; the second, Ghostscript, a PostScript interpreter, acts as a RIP.
 
@@ -132,13 +132,13 @@ CUPS manages printers by creating and maintaining print queues. As we discussed 
 
 CUPS 通过创建并维护打印队列来管理打印机。如前所述，Unix 下的打印原本是设计成多用户共享中央打印机的管理模式的。由于打印机本身比连接到它的电脑要慢，打印系统就需要对打印任务进行调度使其保持顺序。CUPS 还能识别出不同类型的数据（在合理范围内）并转换文件为可打印的格式。
 
-### 为打印准备文件
+# 为打印准备文件
 
 As command line users, we are mostly interested in printing text, though it is certainly possible to print other data formats as well.
 
 作为命令行用户，尽管打印各种格式的文本都能实现，不过打印最多的，还是文本。
 
-#### pr - 转换需要打印的文本文件
+## pr - 转换需要打印的文本文件
 
 We looked at pr a little in the previous chapter. Now we will examine some of its many options used in conjunction with printing. In our history of printing, we saw that character-based printers use monospaced fonts, resulting in 288 Chapter 22 fixed numbers of characters per line and lines per page. pr is used to adjust text to fit on a specific page size, with optional page headers and margins. Table 23-1 summarizes the most commonly used options.
 
@@ -260,13 +260,13 @@ pr is often used in pipelines as a filter. In this example, we will produce a di
     a2ps                arecordmidi     bug-buddy
     a2ps-lpr-wrapper    ark             buildhash
 
-### 将打印任务送至打印机
+# 将打印任务送至打印机
 
 The CUPS printing suite supports two methods of printing historically used on Unix-like systems. One method, called Berkeley or LPD (used in the Berkeley Software Distribution version of Unix), uses the lpr program; the other method, called SysV (from the System V version of Unix), uses the lp program. Both programs do roughly the same thing. Choosing one over the other is a matter of personal taste.
 
 CUPS 打印体系支持两种曾用于类 Unix 系统的打印方式。一种，叫 Berkeley 或 LPD（用于 Unix 的 Berkeley 软件发行版），使用 lpr 程序；另一种，叫 SysV（源自 System V 版本的 Unix），使用 lp 程序。这两个程序的功能大致相同。具体使用哪个完全根据个人喜好。
 
-#### lpr - 打印文件（Berkeley 风格）
+## lpr - 打印文件（Berkeley 风格）
 
 The lpr program can be used to send files to the printer. It may also be used in pipelines, as it accepts standard input. For example, to print the results of our multicolumn directory listing above, we could do this:
 
@@ -342,7 +342,7 @@ Table 23-2 shows some of the common options for lpr.
 </tr>
 </table>
 
-#### lp - 打印文件（System V 风格）
+## lp - 打印文件（System V 风格）
 
 Like lpr, lp accepts either files or standard input for printing. It differs from lpr in that it supports a different (and slightly more sophisticated) option set. Table 23-3 lists the common options.
 
@@ -447,7 +447,7 @@ This pipeline produces a four-column listing using smaller type than the default
 
 这条命令用小于默认的格式产生了一个四列的列表。增加 CPI 可以让我们在页面上打印更多列。
 
-#### 另一种选择：a2ps
+## 另一种选择：a2ps
 
 The a2ps program is interesting. As we can surmise from its name, it’s a format conversion program, but it’s also much more. Its name originally meant ASCII to PostScript, and it was used to prepare text files for printing on PostScript printers. Over the years, however, the capabilities of the program have grown, and now its name means Anything to PostScript. While its name suggests a format-conversion program, it is actually a printing program. It sends its default output, rather than standard output, to the system’s default printer. The program’s default behavior is that of a “pretty printer,” meaning that it improves the appearance of output. We can use the program to create a PostScript file on our desktop:
 
@@ -706,13 +706,13 @@ Note: a2ps is still in active development. During my testing, I noticed differen
 注意：a2ps 目前仍在不断的开发中。就我的测试而言，不同版本之间都多少有所变化。CentOS 4 中输出总是默认为标准输出。在 CentOS 4 和 Fedora 10 中，尽管程序配置信纸为默认媒介，输出还是默认为 A4纸。我可以明确的指定需要的选项来解决这些问题。Ubuntu 8.04 中，a2ps 表现的正如参考文档中所述。
 另外，我们也要注意到另一个转换文本为 PostScript 的输出格式化工具，名叫 enscript。它具有许多相同的格式化和打印功能，但和 a2ps 唯一的不同在于，它只能处理纯文本的输入。
 
-### 监视和控制打印任务
+# 监视和控制打印任务
 
 As Unix printing systems are designed to handle multiple print jobs from multiple users, CUPS is designed to do the same. Each printer is given a print queue, where jobs are parked until they can be spooled to the printer. CUPS supplies several command-line programs that are used to manage printer status and print queues. Like the lpr and lp programs, these management programs are modeled after the corresponding programs from the Berkeley and System V printing systems.
 
 由于 Unix 打印系统的设计是能够处理多用户的多重打印任务，CUPS 也是如此设计的。每台打印机都有一个打印队列，其中的任务直到传送到打印机才停下并进行打印。CUPS 支持一些命令行程序来管理打印机状态和打印队列。想 lpr 和 lp 这样的管理程序都是以 Berkeley 和 System V 打印系统的相应程序为依据进行排列的。
 
-#### lpstat - 显示打印系统状态
+## lpstat - 显示打印系统状态
 
 The lpstat program is useful for determining the names and availability of printers on the system. For example, if we had a system with both a physical printer (named printer) and a PDF virtual printer (named PDF ), we could check their status like this:
 
@@ -803,7 +803,7 @@ lpstat 的常用选项列于表23-5。
 </tr>
 </table>
 
-#### lpq - 显示打印机队列状态
+## lpq - 显示打印机队列状态
 
 To see the status of a printer queue, the lpq program is used. This allows us to view the status of the queue and the print jobs it contains. Here is an example of an empty queue for a system default printer named printer :
 
@@ -826,7 +826,7 @@ we will see it listed:
     Rank      Owner   Job     File(s)           Total Size
     active    me      603     (stdin)           1024 bytes
 
-#### lprm 和 cancel - 取消打印任务
+## lprm 和 cancel - 取消打印任务
 
 CUPS supplies two programs used to terminate print jobs and remove them from the print queue. One is Berkeley style (lprm), and the other is System V (cancel). They differ slightly in the options they support but do basically the same thing. Using our print job above as an example, we could stop the job and remove it this way:
 

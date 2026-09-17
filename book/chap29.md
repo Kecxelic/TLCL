@@ -42,7 +42,7 @@ begin to look at how we can add interactivity to our programs.
 每次我们想要改变 INT 数值的时候，我们必须编辑这个脚本。如果脚本能请求用户输入数值，那
 么它会更加有用处。在这个脚本中，我们将看一下我们怎样给程序增加交互性功能。
 
-### read - 从标准输入读取数值
+# read - 从标准输入读取数值
 
 The read builtin command is used to read a single line of standard input. This
 command can be used to read keyboard input or, when redirection is employed, a line of
@@ -166,7 +166,7 @@ Running this script results in this:
     Enter one or more values > a b c d
     REPLY = 'a b c d'
 
-#### 选项
+## 选项
 
 `read` supports the following options:
 
@@ -310,7 +310,7 @@ as they are typed.
 这个脚本提示用户输入一个密码，并等待输入10秒钟。如果在特定的时间内没有完成输入，
 则脚本会退出并返回一个错误。因为包含了一个 -s 选项，所以输入的密码不会出现在屏幕上。
 
-### IFS
+# IFS
 
 Normally, the shell performs word splitting on the input provided to `read`. As we have
 seen, this means that multiple words separated by one or more spaces become separate
@@ -458,7 +458,7 @@ discussed in Chapter 37.
 >
 > 使用 here 字符串是解决此问题的一种方法。另一种方法将在37章中讨论。
 
-### 校正输入
+# 校正输入
 
 With our new ability to have keyboard input comes an additional programming challenge,
 validating input. Very often the difference between a well-written program and a poorly
@@ -529,7 +529,7 @@ we have covered thus far, including shell functions, `[[ ]]`, `(( ))`, the contr
 使用了许多我们已经讨论过的概念，包括 shell 函数，`[[ ]]`，`(( ))`，控制操作符 `&&`，以及 `if` 和
 一些正则表达式。
 
-### 菜单
+# 菜单
 
 A common type of interactivity is called menu-driven. In menu-driven programs, the
 user is presented with a list of choices and is asked to choose one. For example, we could
@@ -604,7 +604,7 @@ program logic harder to understand), but it works in this script.
 选择的行动。注意脚本中使用的 exit 命令。在这里，在一个行动执行之后， exit 被用来阻止脚本执行不必要的代码。
 通常在程序中出现多个 exit 代码不是一个好主意（它使程序逻辑较难理解），但是它在这个脚本中可以使用。
 
-### 总结归纳
+# 总结归纳
 
 In this chapter, we took our first steps toward interactivity; allowing users to input data
 into our programs via the keyboard. Using the techniques presented thus far, it is
@@ -616,7 +616,7 @@ on the menu-driven program concept to make it even better.
 已经学过的技巧，有可能编写许多有用的程序，比如说特定的计算程序和容易使用的命令行工具
 前端。在下一章中，我们将继续建立菜单驱动程序概念，让它更完善。
 
-#### 友情提示
+## 友情提示
 
 It is important to study the programs in this chapter carefully and have a complete
 understanding of the way they are logically structured, as the programs to come will be
@@ -628,7 +628,7 @@ evaluate the regular expressions and evaluate its exit status. This will be good
 程序会日益复杂。作为练习，用 test 命令而不是`[[ ]]`复合命令来重新编写本章中的程序。
 提示：使用 grep 命令来计算正则表达式及其退出状态。这会是一个不错的练习。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Bash Reference Manual contains a chapter on builtins, which includes the
 read command:

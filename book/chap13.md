@@ -31,7 +31,7 @@ vi 因它难用的用户界面而有点声名狼藉，但是一位大师操作�
 
 Why We Should Learn vi
 
-### 为什么我们应该学习 vi
+# 为什么我们应该学习 vi
 
 In this modern age of graphical editors and easy-to-use text-based editors such as nano,
 why should we learn vi? There are three good reasons:
@@ -67,7 +67,7 @@ Okay, maybe two good reasons.
 
 A Little Background
 
-### 一点儿背景介绍
+# 一点儿背景介绍
 
 The first version of vi was written in 1976 by Bill Joy, a University of California at
 Berkley student who later went on to co-found Sun Microsystems. vi derives its name
@@ -100,7 +100,7 @@ vi 来说，取得了实质性进步。通常，vim 在 Linux 系统中是“vi�
 
 Starting And Stopping vi
 
-### 启动和退出 vi
+# 启动和退出 vi
 
 To start vi, we simply type the following:
 
@@ -176,7 +176,7 @@ missing features. If this is the case, install the full version of vim.
 
 Editing Modes
 
-### 编辑模式
+# 编辑模式
 
 Let's start up vi again, this time passing to it the name of a nonexistent file. This is how
 we can create a new file with vi:
@@ -208,7 +208,7 @@ make a big mess.
 
 Entering Insert Mode
 
-#### 插入模式
+## 插入模式
 
 In order to add some text to our file, we must first enter insert mode. To do this, we press
 the “i” key. Afterwards, we should see the following at the bottom of the screen if vim is
@@ -231,7 +231,7 @@ To exit insert mode and return to command mode, press the Esc key.
 
 Saving Our Work
 
-#### 保存我们的工作
+## 保存我们的工作
 
 To save the change we just made to our file, we must enter an ex command while in
 command mode. This is easily done by pressing the “:” key. After doing this, a colon
@@ -264,7 +264,7 @@ mode. Beware.
 
 Moving The Cursor Around
 
-### 移动光标
+# 移动光标
 
 While in command mode, vi offers a large number of movement commands, some of
 which it shares with less. Here is a subset:
@@ -428,7 +428,7 @@ vi 中的许多命令都可以在前面加上一个数字，比方说上面提�
 
 Basic Editing
 
-### 基本编辑
+# 基本编辑
 
 Most editing consists of a few basic operations such as inserting text, deleting text and
 moving text around by cutting and pasting. vi, of course, supports all of these
@@ -443,7 +443,7 @@ vi，当然，有它独特方式来实现所有的操作。vi 也提供了撤销
 
 Appending Text
 
-#### 追加文本
+## 追加文本
 
 vi has several different ways of entering insert mode. We have already used the i
 command to insert text.
@@ -501,7 +501,7 @@ line before starting insert mode.
 
 Opening A Line
 
-#### 打开一行
+## 打开一行
 
 Another way we can insert text is by “opening” a line. This inserts a blank line between
 two existing lines and enters insert mode. This has two variants:
@@ -574,7 +574,7 @@ Exit insert mode by pressing the Esc key and undo our change by pressing u.
 
 Deleting Text
 
-#### 删除文本
+## 删除文本
 
 As we might expect, vi offers a variety of ways to delete text, all of which contain one
 of two keystrokes. First, the x key will delete a character at the cursor location. x may
@@ -730,7 +730,7 @@ Press u three times to undo the deletion.
 
 Cutting, Copying And Pasting Text
 
-#### 剪切，复制和粘贴文本
+## 剪切，复制和粘贴文本
 
 The d command not only deletes text, it also “cuts” text. Each time we use the d
 command the deletion is copied into a paste buffer (think clipboard) that we can later
@@ -867,7 +867,7 @@ both the p and P commands. When you are done, return the file to its original st
 
 Joining Lines
 
-#### 连接行
+## 连接行
 
 vi is rather strict about its idea of a line. Normally, it is not possible to move the cursor
 to the end of a line and delete the end-of-line character to join one line with the one
@@ -889,7 +889,7 @@ If we place the cursor on line 3 and type the J command, here's what happens:
 
 Search And Replace
 
-### 查找和替换
+# 查找和替换
 
 vi has the ability to move the cursor to locations based on searches. It can do this on
 both a single line or over an entire file. It can also perform text replacements with or
@@ -900,7 +900,7 @@ vi 能把光标移到搜索到的匹配项上。vi 不仅能在搜索一特定�
 
 Searching Within A Line
 
-#### 查找一行
+## 查找一行
 
 The f command searches a line and moves the cursor to the next instance of a specified
 character. For example, the command fa would move the cursor to the next occurrence
@@ -912,7 +912,7 @@ f 命令能搜索一特定行，并将光标移动到下一个匹配的字符上
 
 Searching The Entire File
 
-#### 查找整个文件
+## 查找整个文件
 
 To move the cursor to the next occurrence of a word or phrase, the / command is used.
 This works the same way as we learned earlier in the less program. When you type the
@@ -950,7 +950,7 @@ complex text patterns. We will cover regular expressions in some detail in a lat
 
 Global Search And Replace
 
-#### 全局查找和替代
+## 全局查找和替代
 
 vi uses an ex command to perform search and replace operations (called “substitution”
 in vi) over a range of lines or the entire file. To change the word “Line” to “line” for the
@@ -1135,7 +1135,7 @@ move on to the next one.
 
 Editing Multiple Files
 
-### 编辑多个文件
+# 编辑多个文件
 
 It's often useful to edit more than one file at a time. You might need to make changes to
 multiple files or you may need to copy content from one file into another. With vi we
@@ -1173,7 +1173,7 @@ vi 启动，我们会看到第一个文件显示出来：
 
 Switching Between Files
 
-#### 文件之间切换
+## 文件之间切换
 
 To switch from one file to the next, use this ex command:
 
@@ -1223,7 +1223,7 @@ and our screen now displays the second file.
 
 Opening Additional Files For Editing
 
-#### 打开另一个文件并编辑
+## 打开另一个文件并编辑
 
 It's also possible to add files to our current editing session. The ex command :e (short for
 “edit”) followed by a filename will open an additional file. Let's end our current editing
@@ -1262,7 +1262,7 @@ buffer number.
 
 Copying Content From One File Into Another
 
-#### 跨文件复制黏贴
+## 跨文件复制黏贴
 Often while editing multiple files, we will want to copy a portion of one file into another
 file that we are editing. This is easily done using the usual yank and paste commands we
 used earlier. We can demonstrate as follows. First, using our two files, switch to buffer 1
@@ -1314,7 +1314,7 @@ typing the p command:
 
 Inserting An Entire File Into Another
 
-#### 插入整个文件到另一个文件
+## 插入整个文件到另一个文件
 
 It's also possible to insert an entire file into one that we are editing. To see this in action,
 let's end our vi session and start a new one with just a single file:
@@ -1355,7 +1355,7 @@ Our screen should now look like this:
 
 Saving Our Work
 
-### 保存工作
+# 保存工作
 
 Like everything else in vi, there are several different ways to save our edited files. We
 have already covered the ex command :w, but there are some others we may also find
@@ -1393,7 +1393,7 @@ be editing foo.txt, not foo1.txt.
 
 Further Reading
 
-### 拓展阅读
+# 拓展阅读
 
 Even with all that we have covered in this chapter, we have barely scratched the surface
 of what vi and vim can do. Here are a couple of on-line resources you can use to

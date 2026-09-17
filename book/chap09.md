@@ -31,7 +31,7 @@ The following commands will make an appearance:
 
 * history － 显示历史列表内容
 
-### 命令行编辑
+# 命令行编辑
 
 bash uses a library (a shared collection of routines that different programs can use)
 called Readline to implement command line editing. We have already seen some of this.
@@ -50,7 +50,7 @@ work properly when using a virtual console.
 注意：当我们处于图形化环境时，下面一些按键组合（尤其使用 Alt 键的组合），可能会被图形界面拦截来触发其它的功能。
 但是当切换到虚拟控制台时，所有的按键组合都会正常工作。
 
-### 移动光标
+# 移动光标
 
 The following table lists the keys used to move the cursor:
 
@@ -128,7 +128,7 @@ The following table lists the keys used to move the cursor:
 </tr>
 </table>
 
-### 修改文本
+# 修改文本
 
 Table 9-2 lists keyboard commands that are used to edit characters on the command line.
 
@@ -190,7 +190,7 @@ Table 9-2 lists keyboard commands that are used to edit characters on the comman
 </tr>
 </table>
 
-### 剪切和粘贴文本
+# 剪切和粘贴文本
 
 The Readline documentation uses the terms killing and yanking to refer to what we would
 commonly call cutting and pasting. Items that are cut are stored in a buffer called the
@@ -297,7 +297,7 @@ Readline 程序的开发者们，不能确定一个专用多余的控制键的�
 释放 Esc 键来得到如控制 Alt 键一样的效果。
 
 
-### 自动补全
+# 自动补全
 
 Another way that the shell can help you is through a mechanism called completion.
 Completion occurs when you press the tab key while typing a command. Let's see how
@@ -431,7 +431,7 @@ in later chapters. If you are curious, try:
 >
 > 查看一下如果你能找到它们的话。默认情况下，并不是所有的发行版都包括它们。
 
-### 利用历史命令
+# 利用历史命令
 
 As we discovered in Chapter 2, bash maintains a history of commands that have been
 entered. This list of commands is kept in your home directory in a file called
@@ -442,7 +442,7 @@ typing you have to do, especially when combined with command line editing.
 被保存在你家目录下，一个叫做 .bash_history 的文件里。这个 history 工具是个有用资源，
 因为它可以减少你敲键盘的次数，尤其当和命令行编辑联系起来时。
 
-### 搜索历史命令
+# 搜索历史命令
 
 At any time, we can view the contents of the history list by:
 
@@ -612,7 +612,7 @@ commands in the history list.</td>
 </tr>
 </table>
 
-### 历史命令展开
+# 历史命令展开
 
 The shell offers a specialized type of expansion for items in the history list by using the
 “!” character. We have already seen how the exclamation point can be followed by a
@@ -706,7 +706,7 @@ complete list of the program’s options and features.
 typescript。查看脚本的手册页，可以得到一个关于 script 程序选项和特点的完整列表。
 
 
-### 总结归纳
+# 总结归纳
 
 In this chapter we have covered some of the keyboard tricks that the shell provides to
 help hardcore typists reduce their workloads. I suspect that as time goes by and you
@@ -716,7 +716,7 @@ up more of these tricks. For now, consider them optional and potentially helpful
 在这一章中，我们已经讨论了一些由 shell 提供的键盘操作技巧，这些技巧是来帮助打字员减少工作量的。
 随着时光流逝，你和命令行打交道越来越多，我猜想你会重新翻阅这一章的内容，学会更多的技巧。现在不用一下子全记住。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Wikipedia has a good article on computer terminals:
 

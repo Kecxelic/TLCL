@@ -11,7 +11,7 @@ techniques that can be used to track down and eradicate problems.
 随着我们的脚本变得越来越复杂，当脚本运行错误，执行结果出人意料的时候, 我们就应该查看一下原因了。
 在这一章中，我们将会看一些脚本中出现地常见错误类型，同时还会介绍几个可以跟踪和消除问题的有用技巧。
 
-### 语法错误
+# 语法错误
 
 One general class of errors is syntactic. Syntactic errors involve mis-typing some
 element of shell syntax. In most cases, these kinds of errors will lead to the shell refusing
@@ -41,7 +41,7 @@ As written, this script runs successfully:
     [me@linuxbox ~]$ trouble
     Number is equal to 1.
 
-#### 丢失引号
+## 丢失引号
 
 If we edit our script and remove the trailing quote from the argument following the first
 echo command:
@@ -87,7 +87,7 @@ be enabled by entering the command:
 
     :syntax on
 
-#### 丢失或意外的标记
+## 丢失或意外的标记
 
 Another common mistake is forgetting to complete a compound command, such as if or
 while. Let’s look at what happens if we remove the semicolon after the test in the if
@@ -134,7 +134,7 @@ if 能够接受一系列命令，并且会计算列表中最后一个命令的�
 将会计算命令的 退出代码。接下来遇到单词 else，但是它出局了，因为 shell 把它认定为一个
 保留字（对于 shell 有特殊含义的单词），而不是一个命令名，因此报告错误信息。
 
-#### 预料不到的展开
+## 预料不到的展开
 
 It’s possible to have errors that only occur intermittently in a script. Sometimes the script
 will run fine and other times it will fail because of results of an expansion. If we return
@@ -207,7 +207,7 @@ filenames containing embedded spaces.
 其得到了正确的参数个数。除了代表空字符串之外，引号应该被用于这样的场合，一个要展开
 成多单词字符串的数值，及其包含嵌入式空格的文件名。
 
-### 逻辑错误
+# 逻辑错误
 
 Unlike syntactic errors, logical errors do not prevent a script from running. The script
 will run, but it will not produce the desired result, due to a problem with its logic. There
@@ -244,7 +244,7 @@ expands into multiple command arguments rather than a single filename.
 1. 意外情况。大多数逻辑错误来自于程序碰到了程序员没有预见到的数据或者情况。这也
 可以包括出乎意料的展开，比如说一个包含嵌入式空格的文件名展开成多个命令参数而不是单个的文件名。
 
-#### 防错编程
+## 防错编程
 
 It is important to verify assumptions when programming. This means a careful
 evaluation of the exit status of programs and commands that are used by a script. Here is
@@ -313,7 +313,7 @@ error and the script terminates with an exit status of one to indicate a failure
 这里，我们检验了两种情况，一个名字，看看它是否为一个真正存在的目录，另一个是 cd 命令是否执行成功。
 如果任一种情况失败，就会发送一个错误说明信息到标准错误，然后脚本终止执行，并用退出状态 1 表明脚本执行失败。
 
-#### 验证输入
+## 验证输入
 
 A general rule of good programming is that if a program accepts input, it must be able to
 deal with anything it receives. This usually means that input must be carefully screened,
@@ -367,7 +367,7 @@ more careful development.
 某个重要任务或者多个客户会不断地用到它，此时这个脚本就需要非常谨慎小心地开发了。
 
 
-### 测试
+# 测试
 
 Testing is an important step in every kind of software development, including scripts.
 There is a saying in the open source world, “release early, release often,” which reflects
@@ -425,7 +425,7 @@ can be used to help find and remove the changes when testing is complete.
 
 我们也在代码中添加了一些注释，用来标记与测试相关的改动。当测试完成之后，这些注释可以帮助我们找到并删除所有的更改。
 
-#### 测试案例
+## 测试案例
 
 To perform useful testing, it's important to develop and apply good test cases. This is
 done by carefully choosing input data or operating conditions that reflect edge and
@@ -460,7 +460,7 @@ careful consideration during both its design and testing.
 正如设计，测试也是一个时间的函数。不是每一个脚本功能都需要做大量的测试。问题关键是确定什么功能是最重要的。因为
 测试若发生故障会存在如此潜在的破坏性，所以我们的代码片在设计和测试段期间都应值得仔细推敲。
 
-### 调试
+# 调试
 
 If testing reveals a problem with a script, the next step is debugging. “A problem”
 usually means that the script is, in some way, not performing to the programmers
@@ -476,7 +476,7 @@ problems are quite strange and unexpected and more involved techniques are requi
 能够监测异常条件，并能为用户提供有用的反馈信息。
 然而有时候，出现的问题相当稀奇，出人意料，这时候就需要更多的调试技巧了。
 
-#### 找到问题区域
+## 找到问题区域
 
 In some scripts, particularly long ones, it is sometimes useful to isolate the area of the
 script that is related to the problem. This won’t always be the actual error, but isolation
@@ -507,7 +507,7 @@ if the removal of the code has any impact on the behavior of the bug.
 通过给脚本中的一个逻辑区块内的每条语句的开头添加一个注释符号，我们就阻止了这部分代码的执行。然后可以再次执行测试，
 来看看清除的代码是否影响了错误的行为。
 
-#### 追踪
+## 追踪
 
 Bugs are often cases of unexpected logical flow within a script. That is, portions of the
 script are either never being executed, or are being executed in the wrong order or at the
@@ -623,7 +623,7 @@ portions of a troublesome script.
 
 我们使用 set 命令加上 -x 选项来启动追踪，+x 选项关闭追踪。这种技术可以用来检查一个有错误的脚本的多个部分。
 
-#### 执行时检查数值
+## 执行时检查数值
 
 It is often useful, along with tracing, to display the content of variables to see the internal
 workings of a script while it is being executed. Applying additional echo statements will
@@ -652,7 +652,7 @@ scripts.
 在这个简单的示例中，我们只是显示变量 number 的数值，并为其添加注释，随后利于其识别和清除。
 当查看脚本中的循环和算术语句的时候，这种技术特别有用。
 
-### 总结
+# 总结
 
 In this chapter, we looked at just a few of the problems that can crop up during script de-
 velopment. Of course, there are many more. The techniques described here will enable
@@ -664,7 +664,7 @@ and in finding bugs (effective use of tracing).
 大多数的常见错误是有效的。调试是一种艺术，可以通过开发经验，在知道如何避免错误(整个开发过程中不断测试)
 以及在查找 bug（有效利用追踪）两方面都会得到提升。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Wikipedia has a couple of short articles on syntactic and logical errors:
 

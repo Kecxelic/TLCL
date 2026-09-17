@@ -40,7 +40,7 @@ this chapter are:
 
 * alias – 创建命令别名
 
-### 到底什么是命令？
+# 到底什么是命令？
 
 A command can be one of four different things:
 
@@ -74,7 +74,7 @@ functions in later chapters, but for now, just be aware that they exist.
 
 4. 一个命令别名。我们可以定义自己的命令，建立在其它命令之上。
 
-### 识别命令
+# 识别命令
 
 It is often useful to know exactly which of the four kinds of commands is being used and
 Linux provides a couple of ways to find out.
@@ -82,7 +82,7 @@ Linux provides a couple of ways to find out.
 准确地知道正在使用的四种命令中的哪一种通常很有用
 Linux 提供了几种查找方法。
 
-### type － 显示命令的类型
+# type － 显示命令的类型
 
 The type command is a shell builtin that displays the kind of command the shell will
 execute, given a particular command name. It works like this:
@@ -112,7 +112,7 @@ in color!
 我们看到这三个不同命令的检测结果。注意，ls 命令（在 Fedora 系统中）的检查结果，ls 命令实际上
 是 ls 命令加上选项"-\-color=tty"的别名。现在我们知道为什么 ls 的输出结果是有颜色的！
 
-### which － 显示一个可执行程序的位置
+# which － 显示一个可执行程序的位置
 
 Sometimes there is more than one version of an executable program installed on a
 system. While this is not very common on desktop systems, it's not unusual on large
@@ -141,14 +141,14 @@ which is a fancy way of saying “command not found.”
 
 这些信息真正的意思就是“命令没有找到”。
 
-### 得到命令文档
+# 得到命令文档
 
 With this knowledge of what a command is, we can now search for the documentation
 available for each kind of command.
 
 知道了什么是命令，现在我们来查找每一类命令的文档。
 
-### help － 得到 shell 内建命令的帮助文档
+# help － 得到 shell 内建命令的帮助文档
 
 bash has a built-in help facility available for each of the shell builtins. To use it, type
 “help” followed by the name of the shell builtin. For example:
@@ -181,7 +181,7 @@ talked about yet! Don't worry. We'll get there.
 虽然 cd 命令的帮助文档很简洁准确，但它决不是教程。正如我们所看到的，它似乎提到了许多
 我们还没有谈论到的东西！不要担心，我们会学到的。
 
-### -\-help - 显示用法信息
+# -\-help - 显示用法信息
 
 Many executable programs support a “-\-help” option that displays a description of the
 command's supported syntax and options. For example:
@@ -198,7 +198,7 @@ error message that will reveal the same usage information.
 一些程序不支持 -\-help 选项，但不管怎样试一下。通常输出的错误提示也同样能
 揭示命令的用法信息。
 
-### man － 显示用户手册
+# man － 显示用户手册
 
 Most executable programs intended for command line use provide a formal piece of
 documentation called a manual or man page. A special paging program called man is
@@ -349,7 +349,7 @@ This will display the man page describing the file format of the /etc/passwd fil
 
 命令运行结果会显示文件 /etc/passwd 的文件格式说明手册。
 
-### apropos － 显示适合的命令
+# apropos － 显示适合的命令
 
 It is also possible to search the list of man pages for possible matches based on a search
 term. It's very crude but sometimes helpful. Here is an example of a search for man
@@ -369,7 +369,7 @@ function as apropos.
 输出结果每行的第一个字段是手册页的名字，第二个字段展示章节。注意，man 命令加上"-k"选项，
 和 apropos 完成一样的功能。
 
-### whatis － 显示非常简洁的命令说明
+# whatis － 显示非常简洁的命令说明
 
 The whatis program displays the name and a one line description of a man page
 matching a specified keyword:
@@ -402,7 +402,7 @@ read it and it all makes sense.
 > 另一方面，bash 参考手册的内容非常简明精确，同时也非常完善。所以，如果你有胆量就查看一下，
 并且期望有一天你能读懂它。
 
-### info － 显示程序 Info 条目
+# info － 显示程序 Info 条目
 
 The GNU Project provides an alternative to man pages for their programs, called “info.”
 Info pages are displayed with a reader program named, appropriately enough, info.
@@ -534,7 +534,7 @@ package.
 
 将会显示一个包含超级链接的手册页，这些超级链接指向包含在 coreutils 包中的各个程序。
 
-### README 和其它程序文档
+# README 和其它程序文档
 
 Many software packages installed on your system have documentation files residing in
 the /usr/share/doc directory. Most of these are stored in plain text format and can
@@ -550,7 +550,7 @@ of gzip-compressed text files.
 已经压缩了这些文件。gzip 软件包包括一个特殊版本的 less ，叫做 zless，zless 可以显示由
 gzip 压缩的文本文件的内容。
 
-### 用别名（alias）创建你自己的命令
+# 用别名（alias）创建你自己的命令
 
 Now for our very first experience with programming! We will create a command of our
 own using the alias command. But before we start, we need to reveal a small
@@ -668,7 +668,7 @@ we have taken our first, albeit tiny, step into the world of shell programming!
 我们会了解怎样把自己的别名添加到文件中去，每次我们登录系统，这些文件会建立系统环境。
 现在，好好享受我们刚经历过的，步入 shell 编程世界的第一步吧，虽然是小小的一步。
 
-### 拜访老朋友
+# 拜访老朋友
 
 Now that we have learned how to find the documentation for commands, go and look up
 the documentation for all the commands we have encountered so far. Study what
@@ -677,7 +677,7 @@ additional options are available and try them out!
 既然我们已经学习了怎样找到命令的帮助文档，那就试着查阅，到目前为止，我们学到的所有
 命令的文档。学习命令其它可用的选项，练习一下！
 
-### 拓展阅读
+# 拓展阅读
 
 * There are many online sources of documentation for Linux and the command line. Here
   are some of the best:

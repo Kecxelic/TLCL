@@ -56,7 +56,7 @@ This chapter will introduce the following commands:
 
 * shutdown – 关机或重启系统
 
-### 进程是怎样工作的
+# 进程是怎样工作的
 
 When a system starts up, the kernel initiates a few of its own activities as processes and
 launches a program called init. init, in turn, runs a series of shell scripts (located in
@@ -86,7 +86,7 @@ IDs, etc.
 进程(process) ID 或 PID。PID 号按升序分配，init 进程的 PID 总是1。内核也对分配给每个进程的内存和就绪状态进行跟踪以便继续执行这个进程。
 像文件一样，进程也有所有者和用户 ID，有效用户 ID，等等。
 
-### 查看进程
+# 查看进程
 
 The most commonly used command to view processes (there are several) is ps. The ps
 program has a lot of options, but in it simplest form it is used like this:
@@ -351,7 +351,7 @@ a date is used.</td>
 </tbody>
 </table>
 
-### 用 top 命令动态查看进程
+# 用 top 命令动态查看进程
 
 While the ps command can reveal a lot about what the machine is doing, it provides only
 a snapshot of the machine's state at the moment the ps command is executed. To see a
@@ -602,7 +602,7 @@ the system slowdown that we are trying to track.
 （和 Windows 中的任务管理器类似），但是我觉得 top 程序要好于图形化的版本，
 因为它运行速度快，并且消费很少的系统资源。总不至于因为启动了监控界面，让那被监控的系统都变慢。
 
-### 控制进程
+# 控制进程
 
 Now that we can see and monitor processes, let's gain some control over them. For our
 experiments, we're going to use a little program called xlogo as our guinea pig. The
@@ -642,7 +642,7 @@ xlogo window, the prompt returns.
 注意，为什么我们的 shell 提示符还没有返回？这是因为 shell 正在等待这个程序结束，
 就像到目前为止我们用过的其它所有程序一样。如果我们关闭 xlogo 窗口，shell 提示符就返回了。
 
-### 中断一个进程
+# 中断一个进程
 
 Let's observe what happens when we run xlogo again. First, enter the xlogo
 command and verify that the program is running. Next, return to the terminal window
@@ -665,7 +665,7 @@ Many (but not all) command line programs can be interrupted by using this techni
 
 通过这个技巧，许多（但不是全部）命令行程序可以被中断。
 
-### 把一个进程放置到后台(执行)
+# 把一个进程放置到后台(执行)
 
 Let's say we wanted to get the shell prompt back without terminating the xlogo
 program. We’ll do this by placing the program in the background. Think of the terminal
@@ -710,7 +710,7 @@ command was xlogo &.
 
 结果显示我们有一个任务，编号为“1”，它正在运行，并且这个任务的命令是 xlogo ＆。
 
-### 进程返回到前台
+# 进程返回到前台
 
 A process in the background is immune from keyboard input, including any attempt
 interrupt it with a Ctrl-c. To return a process to the foreground, use the fg command,
@@ -731,7 +731,7 @@ xlogo, type Ctrl-c.
 fg 命令之后，跟随着一个百分号和任务序号（叫做 jobspec ，如此处的 %1）就可以了。如果我们只有一个后台任务，那么
 jobspec(job specification) 是可有可无的。输入 Ctrl-c 来终止 xlogo 程序。
 
-### 停止一个进程
+# 停止一个进程
 
 Sometimes we'll want to stop a process without terminating it. This is often done to
 allow a foreground process to be moved to the background. To stop a foreground
@@ -783,7 +783,7 @@ programs have many interesting and useful command line options.
 一个程序不能从图形界面菜单中启动。通过从命令行中启动它，我们可能会看到
 能揭示问题的错误信息。一些图形界面程序还有许多有意思并且有用的命令行选项。
 
-### Signals
+# Signals
 
 The kill command is used to “kill” programs. This allows us to terminate programs
 that need killing. Here's an example:
@@ -821,7 +821,7 @@ Ctrl-z 时，则发送一个叫做 TSTP（Terminal Stop ，终端停止）的信
 接到信号之后，则做出响应。一个程序能够监听和响应信号这件事允许一个程序做些事情，
 比如，当程序接到一个终止信号时，它可以保存所做的工作。
 
-### 通过 kill 命令给进程发送信号
+# 通过 kill 命令给进程发送信号
 
 The kill command is used to send signals to programs. Its most common syntax looks
 like this:
@@ -1071,7 +1071,7 @@ For the curious, a complete list of signals can be seen with the following comma
 
     [me@linuxbox ~]$ kill -l
 
-### 通过 killall 命令给多个进程发送信号
+# 通过 killall 命令给多个进程发送信号
 
 It's also possible to send signals to multiple processes matching a specified program or
 user name by using the killall command. Here is the syntax:
@@ -1098,7 +1098,7 @@ processes that do not belong to you.
 
 记住，和 kill 命令一样，你必须拥有超级用户权限才能给不属于你的进程发送信号。
 
-### 更多和进程相关的命令
+# 更多和进程相关的命令
 
 Since monitoring processes is an important system administration task, there are a lot of
 commands for it. Here are some to play with:

@@ -14,7 +14,7 @@ languages (including the shell) provide a flow control mechanism for multiple-ch
 这种类型的构造经常出现在程序中，出现频率如此之多，以至于许多编程语言（包括 shell）
 专门为多选决策提供了一种流程控制机制。
 
-### case
+# case
 
 The bash multiple-choice compound command is called case. It has the following syntax:
 
@@ -114,7 +114,7 @@ match is found, no further matches are attempted.
 case 命令检查一个变量值，在我们这个例子中，就是 REPLY 变量的变量值，然后试图去匹配其中一个具体的模式。
 当与之相匹配的模式找到之后，就会执行与该模式相关联的命令。若找到一个模式之后，就不会再继续寻找。
 
-### 模式
+# 模式
 
 The patterns used by case are the same as those used by pathname expansion. Patterns
 are terminated with a “)” character. Here are some valid patterns:
@@ -239,7 +239,7 @@ selection. Notice how the new patterns allow for entry of both upper- and lowerc
 
 这里，我们更改了 case-menu 程序的代码，用字母来代替数字做为菜单选项。注意新模式如何使得大小写字母都是有效的输入选项。
 
-### 执行多个动作
+# 执行多个动作
 
 In versions of bash prior to 4.0, case allowed only one action to be performed on a
 successful match. After a successful match, the command would terminate. Here we see
@@ -312,7 +312,7 @@ simply terminating.
 
 添加的 “;;&” 的语法允许 case 语句继续执行下一条测试，而不是简单地终止运行。
 
-### 总结
+# 总结
 
 The case command is a handy addition to our bag of programming tricks. As we will
 see in the next chapter, it’s the perfect tool for handling certain types of problems.
@@ -320,7 +320,7 @@ see in the next chapter, it’s the perfect tool for handling certain types of p
 case 命令是我们编程技巧口袋中的一个便捷工具。在下一章中我们将看到，
 对于处理某些类型的问题来说，case 命令是一个完美的工具。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Bash Reference Manual section on Conditional Constructs describes the
 case command in detail:

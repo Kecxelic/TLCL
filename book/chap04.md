@@ -22,7 +22,7 @@ Linux 系统有帮助的命令。
 
 * less — 浏览文件内容
 
-### ls 乐趣
+# ls 乐趣
 
 The ls command is probably the most used command, and for good reason. With it, we
 can see directory contents and determine a variety of important file and directory
@@ -74,7 +74,7 @@ By adding “-l” to the command, we changed the output to the long format.
 
 使用 ls 命令的“-l”选项，则结果以长模式输出。
 
-### 选项和参数
+# 选项和参数
 
 This brings us to a very important point about how most commands work. Commands are often
 followed by one or more options that modify their behavior, and further, by one or more arguments,
@@ -216,7 +216,7 @@ ls display its results in ascending alphabetical order.  </td>
 </tr>
 </table>
 
-### 深入研究长格式输出
+# 深入研究长格式输出
 
 As we saw before, the “-l” option causes ls to display its results in long format. This
 format contains a great deal of useful information. Here is the Examples directory
@@ -322,7 +322,7 @@ later in this chapter.  </td>
 </tr>
 </table>
 
-### 确定文件类型
+# 确定文件类型
 
 As we explore the system it will be useful to know what files contain. To do
 this we will use the file command to determine a file's type. As we discussed earlier,
@@ -356,7 +356,7 @@ are many kinds that are a little less obvious and a few that are quite strange.
 
 虽然系统中许多文件格式是熟悉的，例如 MP3和 JPEG 文件，但也有一些文件格式不太常见，极少数文件相当陌生。
 
-### 用 less 浏览文件内容
+# 用 less 浏览文件内容
 
 The less command is a program to view text files. Throughout our Linux system, there
 are many files that contain human-readable text. The less program provides a
@@ -539,7 +539,7 @@ The table below lists the most common keyboard commands used by less.
 </tr>
 </table>
 
-### 少就是多
+# 少就是多
 
 The less program was designed as an improved replacement of an earlier Unix
 program called more. The name “less” is a play on the phrase “less is more”—a
@@ -556,7 +556,7 @@ forward and backward and has many other features as well.
 less 属于"页面调度器"类程序，这些程序允许以逐页方式轻松浏览长文本文档。 more
 程序只能向前翻页，而 less 程序允许前后翻页，此外还有很多其它的特性。
 
-### 旅行指南
+# 旅行指南
 
 The file system layout on your Linux system is much like that found on other Unix-like
 systems. The design is actually specified in a published standard called the Linux
@@ -908,7 +908,7 @@ some systems, you must be the superuser to view log files.</td>
 你必须是超级用户才能查看这些日志文件。</td></tr>
 </table>
 
-### 符号链接
+# 符号链接
 
 As we look around, we are likely to see a directory listing with an entry like this:
 
@@ -969,7 +969,7 @@ We will learn how to create symbolic links in the next chapter.
 叫做 “libc-2.6.so” 的共享库文件。这意味着，寻找文件 “libc.so.6” 的程序，实际上得到是文件 “libc-2.6.so”。
 在下一章节，我们将学习如何建立符号链接。
 
-### 硬链接
+# 硬链接
 
 While we are on the subject of links, we need to mention that there is a second type of
 link called a hard link. Hard links also allow files to have multiple names, but they do it
@@ -979,7 +979,7 @@ links in the next chapter.
 讨论到链接问题，我们需要提一下，还有一种链接类型，叫做硬链接。硬链接同样允许文件有多个名字，
 但是硬链接以不同的方法来创建多个文件名。在下一章中，我们会谈到更多符号链接与硬链接之间的差异问题。
 
-### 拓展阅读
+# 拓展阅读
 
 * The full version of the Linux Filesystem Hierarchy Standard can be found here:
 

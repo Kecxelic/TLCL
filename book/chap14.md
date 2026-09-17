@@ -19,7 +19,7 @@ to control it.
 
 Anatomy Of A Prompt
 
-### 解剖一个提示符
+# 解剖一个提示符
 
 Our default prompt looks something like this:
 
@@ -281,7 +281,7 @@ cursor or changing text colors.
 
 Trying Some Alternate Prompt Designs
 
-### 自定制提示符
+# 自定制提示符
 
 With this list of special characters, we can change the prompt to see the effect. First,
 we'll back up the existing string so we can restore it later. To do this, we will copy the
@@ -360,7 +360,7 @@ brilliant new prompt.
 
 Adding Color
 
-### 添加颜色
+# 添加颜色
 
 Most terminal emulator programs respond to certain non-printing character sequences to
 control such things as character attributes (like color, bold text and the dreaded blinking
@@ -644,7 +644,7 @@ attribute, however.
 
 Moving The Cursor
 
-### 移动光标
+# 移动光标
 
 Escape codes can be used to position the cursor. This is commonly used to provide a
 clock or some other kind of information at a different location on the screen such as an
@@ -885,7 +885,7 @@ true size of the displayed prompt.  </td>
 
 Saving The Prompt
 
-### 保存提示符
+# 保存提示符
 
 Obviously, we don't want to be typing that monster all the time, so we'll want to store our
 prompt someplace. We can make the prompt permanent by adding it to our .bashrc
@@ -899,7 +899,7 @@ file. To do so, add these two lines to the file:
 
 Summing Up
 
-### 总结归纳
+# 总结归纳
 
 Believe it or not, there is much more that can be done with prompts involving shell
 functions and scripts that we haven't covered here, but this is a good start. Not everyone
@@ -913,7 +913,7 @@ of trivial fun.
 
 Further Reading
 
-### 拓展阅读
+# 拓展阅读
 
 
 * The Bash Prompt HOWTO from the Linux Documentation Project provides a

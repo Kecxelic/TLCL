@@ -95,7 +95,7 @@ script.
 
 在这一章中，我们将使用自顶向下的设计方法来进一步开发我们的报告产生器脚本。
 
-### Shell 函数
+# Shell 函数
 
 Our script currently performs the following steps to generate the HTML document:
 
@@ -283,7 +283,7 @@ one command. The return command (which is optional) satisfies the requirement.
 
 Shell 函数的命名规则和变量一样。一个函数必须至少包含一条命令。这条 return 命令（是可选的）满足要求。
 
-### 局部变量
+# 局部变量
 
 In the scripts we have written so far, all the variables (including constants) have been
 global variables. Global variables maintain their existence throughout the program. This
@@ -357,7 +357,7 @@ script, as needed.
 阻止了程序各部分之间的相互干涉。这样 shell 函数也可以移植。也就是说，按照需求，
 shell 函数可以在脚本之间进行剪切和粘贴。
 
-### 保持脚本运行
+# 保持脚本运行
 
 While developing our program, it is useful to keep the program in a runnable state. By
 doing this, and testing frequently, we can detect errors early in the development process.
@@ -510,7 +510,7 @@ could create a similar function named ds for our .bashrc file:
 >     }
 
 
-### 总结归纳
+# 总结归纳
 
 In this chapter, we have introduced a common method of program design called top-
 down design, and we have seen how shell functions are used to build the stepwise
@@ -524,7 +524,7 @@ to be reusable by allowing them to be placed in multiple programs; a great time 
 独立于其它函数，以及其所在程序的其它部分。这就有可能使 shell 函数以可移植的方式编写，
 并且能够重复使用，通过把它们放置到多个程序中；节省了大量的时间。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Wikipedia has many articles on software design philosophy. Here are a
   couple of good ones:

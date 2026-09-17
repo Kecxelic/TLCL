@@ -10,7 +10,7 @@ that allow our programs to get access to the contents of the command line.
 现在我们的程序还缺少一种本领，就是接收和处理命令行选项和参数的能力。在这一章中，我们将探究一些能
 让程序访问命令行内容的 shell 性能。
 
-### 访问命令行
+# 访问命令行
 
 The shell provides a set of variables called positional parameters that contain the individ-
 ual words on the command line. The variables are named 0 through 9. They can be
@@ -77,7 +77,7 @@ ample ${10}, ${55}, ${211}, and so on.
 注意： 实际上通过参数展开方式你可以访问的参数个数多于9个。只要指定一个大于9的数字，用花括号把该数字括起来就可以。
 例如 ${10}、 ${55}、 ${211}等等。
 
-#### 确定参数个数
+## 确定参数个数
 
 The shell also provides a variable, $#, that yields the number of arguments on the com-
 mand line:
@@ -117,7 +117,7 @@ The result:
     $8 =
     $9 =
 
-#### shift - 访问多个参数的利器
+## shift - 访问多个参数的利器
 
 But what happens when we give the program a large number of arguments such as this:
 
@@ -178,7 +178,7 @@ $1 with the next argument. Here is the program at work:
     Argument 3 = c
     Argument 4 = d
 
-#### 简单应用
+## 简单应用
 
 Even without shift, it’s possible to write useful applications using positional parameters.
 By way of example, here is a simple file information program:
@@ -215,7 +215,7 @@ automatically adjusts to contain the name of the program.
 basename $0 的执行结果就很有用处。按照这种方式编码，可以重命名该脚本，且程序信息会自动调整为
 包含相应的程序名称。
 
-#### Shell 函数中使用位置参数
+## Shell 函数中使用位置参数
 
 Just as positional parameters are used to pass arguments to shell scripts, they can also be
 used to pass arguments to shell functions. To demonstrate, we will convert the
@@ -257,7 +257,7 @@ function as we might expect.
 跟踪当前执行的 shell 函数。注意位置参数 $0 总是包含命令行中第一项的完整路径名（例如，该程序的名字），
 但不会包含这个我们可能期望的 shell 函数的名字。
 
-### 处理集体位置参数
+# 处理集体位置参数
 
 It is sometimes useful to manage all the positional parameters as a group. For example,
 we might want to write a “wrapper” around another program. This means that we create a
@@ -381,7 +381,7 @@ parameter.
 这个结果符合我们实际的期望。我们从中得到的教训是尽管 shell 提供了四种不同的得到位置参数列表的方法，
 但到目前为止， "$@" 在大多数情况下是最有用的方法，因为它保留了每一个位置参数的完整性。
 
-### 一个更复杂的应用
+# 一个更复杂的应用
 
 After a long hiatus, we are going to resume work on our sys_info_page program.
 Our next addition will add several command line options to the program as follows:
@@ -553,7 +553,7 @@ generation of the page. Its output is either directed to standard output
 正如我们所看到的，程序调用 write_html_page 函数来生成实际的网页。函数输出要么直接定向到
 标准输出（若 filename 变量为空的话）要么重定向到具体的文件中。
 
-### 总结
+# 总结
 
 With the addition of positional parameters, we can now write fairly functional scripts.
 For simple, repetitive tasks, positional parameters make it possible to write very useful
@@ -675,7 +675,7 @@ We’re not done yet. There are still more things we can do and improvements we 
 
 我们还没有完成。仍然还有许多事情我们可以做，可以改进。
 
-### 拓展阅读
+# 拓展阅读
 
 * The _Bash Hackers Wiki_ has a good article on positional parameters:
 

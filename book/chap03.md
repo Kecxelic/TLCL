@@ -23,7 +23,7 @@ introduce the following commands:
 * ls — 列出目录内容
 
 
-### 理解文件系统树
+# 理解文件系统树
 
 Like Windows, a Unix-like operating system such as Linux organizes its files
 in what is called a hierarchical directory structure. This means that they are
@@ -49,7 +49,7 @@ the person (or persons) responsible for the maintenance of the system.
 比如 Linux，总是只有一个单一的文件系统树，不管有多少个磁盘或者存储设备连接到计算机上。
 根据负责维护系统安全的系统管理员的兴致，存储设备连接到（或着更精确些，是挂载到）目录树的各个节点上。
 
-### 当前工作目录
+# 当前工作目录
 
 Most of us are probably familiar with a graphical file manager which
 represents the file system tree as in Figure 1. Notice that the tree is
@@ -93,7 +93,7 @@ directory is the only place the user is allowed to write files.
 每个用户都有他自己的家目录，当用户以普通用户的身份操控系统时，家目录是唯一
 允许用户写入文件的地方。
 
-### 列出目录内容
+# 列出目录内容
 
 To list the files and directories in the current working directory, we use the
 ls command.
@@ -110,7 +110,7 @@ do as well. We'll spend more time with ls in the next chapter.
 实际上，用 ls 命令可以列出任一个目录的内容，而不只是当前工作目录的内容。
 ls 命令还能完成许多有趣的事情。在下一章节，我们将介绍更多关于 ls 的知识。
 
-### 更改当前工作目录
+# 更改当前工作目录
 
 To change your working directory (where we are standing in our tree-shaped
 maze) we use the cd command. To do this, type cd followed by the pathname of
@@ -124,7 +124,7 @@ pathnames. Let's deal with absolute pathnames first.
 到达想要的目录期间所经过的路线。路径名可通过两种方式来指定，一种是绝对路径，
 另一种是相对路径。我们先来介绍绝对路径。
 
-### 绝对路径
+# 绝对路径
 
 An absolute pathname begins with the root directory and follows the tree
 branch by branch until the path to the desired directory or file is completed.
@@ -153,7 +153,7 @@ working directory.
 我们把工作目录转到 /usr/bin 目录下，里面装满了文件。注意 shell 提示符是怎样改变的吗？
 为了方便，通常终端提示符自动显示工作目录。
 
-### 相对路径
+# 相对路径
 
 Where an absolute pathname starts from the root directory and leads to its
 destination, a relative pathname starts from the working directory. To do
@@ -227,7 +227,7 @@ something, the working directory will be assumed.
 
 可以实现相同的效果。总的来说，如果不指定一个文件的路径，那它被默认为在当前工作目录下。
 
-### 有用的快捷键
+# 有用的快捷键
 
 In table 3-1 we see some useful ways the current working directory can be
 quickly changed.

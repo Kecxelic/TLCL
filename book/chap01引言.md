@@ -60,7 +60,7 @@ known if you care enough to find out.
 它决定你的计算机能做什么，同时能够拥有这种“自由”的唯一方式就是知道计算机正在做什么。
 “自由”是指一台没有任何秘密的计算机，你可以从它那里了解一切，只要你用心的去寻找。
 
-### 为什么使用命令行
+# 为什么使用命令行_UI完成简单任务CL完成复杂任务
 
 Have you ever noticed in the movies when the “super hacker,”— you know, the guy who
 can break into the ultra-secure military computer in under thirty seconds —sits down at
@@ -82,8 +82,8 @@ still very true today.
 
 现在，大多数的计算机用户只是熟悉图形用户界面（GUI），并且产品供应商和此领域的学者会灌输给用户这样的思想，
 命令行界面（CLI）是过去使用的一种很恐怖的东西。这就很不幸，因为一个好的命令行界面，
-是用来和计算机进行交流沟通的非常有效的方式，正像人类社会使用文字互通信息一样。人们说，“图形用户界面让简单的任务更容易完成，
-而命令行界面使完成复杂的任务成为可能”，到现在这句话仍然很正确。
+是用来和计算机进行交流沟通的非常有效的方式，正像人类社会使用文字互通信息一样。人们说，**“图形用户界面让简单的任务更容易完成，**
+**而命令行界面使完成复杂的任务成为可能”**，到现在这句话仍然很正确。
 
 Since Linux is modeled after the Unix family of operating systems, it shares the same
 rich heritage of command line tools as Unix. Unix came into prominence during the
@@ -97,7 +97,7 @@ over, say, Windows NT was the powerful command line interface which made the
 Unix 在20世纪80年代初显赫一时(虽然，开发它在更早之前），这使得图形界面的流行之前，命令行界面就已被广泛应用。
 事实上，很多人选择 Linux（而不是其他的系统，比如说 Windows NT）是因为其可以使“完成复杂的任务成为可能”的强大的命令行界面。
 
-### 这本书讲什么
+# 这本书讲什么_主LinuxCL少系统管理不讲其他平台
 
 This book is a broad overview of “living” on the Linux command line. Unlike
 some books that concentrate on just a single program, such as the shell
@@ -118,7 +118,7 @@ system administration task.
 
 __这不是一本关于 Linux 系统管理的书__。然而任何一个关于命令行的深入讨论，都一定会牵涉到
 系统管理方面的内容，这本书仅仅提到一点儿管理方面的知识。但是这本书为读者准备好了学习更多内容的坚实基础，
-毕竟要胜任系统管理工作也需要良好的命令行使用基本功。
+毕竟**要胜任系统管理工作也需要良好的命令行使用基本功**。
 
 This book is very Linux-centric. Many other books try to broaden their appeal
 by including other platforms such as generic Unix and MacOS X. In doing so,
@@ -132,7 +132,7 @@ __这本书是围绕 Linux 而写的__。许多书籍，为了扩大自身的影
 这本书只研究了当代 Linux 发行版。虽然，对于使用其它类 Unix 系统的用户来说，
 书中95％的内容是有用的，但这本书主要面向的对象是现代 Linux 命令行用户。
 
-### 谁应该读这本书
+# 谁应该读这本书_Linux启蒙
 
 This book is for new Linux users who have migrated from other platforms. Most
 likely you are a “power user” of some version of Microsoft Windows. Perhaps
@@ -170,7 +170,7 @@ we'll start you down that path as well.
 
 如果你没有编程经验，也不要担心，我会带你入门。
 
-### 这本书的内容
+# 这本书的内容_四大部分
 
 This material is presented in a carefully chosen sequence, much like a tutor
 sitting next to you guiding you along. Many authors treat this material in a
@@ -231,14 +231,14 @@ concepts that can be applied to many other programming languages.
   常见的计算任务，很容易学。通过学习 shell 编程，你会逐渐熟悉一些关于编程语言方面的概念，
   这些概念也适用于其他的编程语言。
 
-### 怎样阅读这本书
+# 怎样阅读这本书
 
 Start at the beginning of the book and follow it to the end. It isn’t written as a reference
 work, it's really more like a story with a beginning, middle, and an end.
 
 从头到尾的阅读。它并不是一本技术参考手册，实际上它更像一本故事书，有开头，过程，结尾。
 
-#### 前提条件
+## 前提条件
 
 To use this book, all you will need is a working Linux installation. You can get this in
 one of two ways:
@@ -333,7 +333,7 @@ AIX. I have chosen to use the popular format. If, however, you prefer to use
 比如说 DOS, Windows, MacOS, Solaris, Irix, AIX. 所以我选择用流行的命名规则。然而，
 如果你喜欢用“GNU/Linux”，当你读这本书时，可以在脑子里搜索并替换“Linux”。我不介意。
 
-### 拓展阅读
+# 拓展阅读
 
 Here are some Wikipedia articles on the famous people mentioned in this chapter:
 

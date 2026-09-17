@@ -45,7 +45,7 @@ In addition, we will introduce a couple of commands to assist us in our explorat
 
 * stat – 显示文件或文件系统状态
 
-### locate - 查找文件的简单方法
+# locate - 查找文件的简单方法
 
 The locate program performs a rapid database search of pathnames and outputs every
 name that matches a given substring. Say, for example, we want to find all the programs
@@ -131,7 +131,7 @@ updatedb 程序。因为数据库不能被持续地更新，所以当使用 loca
 目前最新的文件不会出现。为了克服这个问题，通过更改为超级用户身份，在提示符下运行 updatedb 命令，
 可以手动运行 updatedb 程序。
 
-### find - 查找文件的复杂方式
+# find - 查找文件的复杂方式
 
 While the locate program can find a file based solely on its name, the find program
 searches a given directory (and its subdirectories) for files based on a variety of
@@ -167,7 +167,7 @@ tests, and actions. We’ll look at the tests first.
 哇，我们一直很忙（在 home 路径下执行了很多操作，译者注）！find 命令的魅力所在就是它能够被用来找到符合特定标准的文件。它通过
 （有点奇怪）应用选项，测试条件，和操作来做到这一点。我们先看一下测试条件：
 
-#### Tests
+## Tests
 
 Let’s say that we want a list of directories from our search. To do this, we could add the
 following test:
@@ -534,7 +534,7 @@ This is not a complete list. The find man page has all the details.
 
 这不是一个完整的列表。find 命令手册有更详细的说明。
 
-#### 操作符
+## 操作符
 
 Even with all the tests that find provides, we may still need a better way to describe the
 logical relationships between the tests. For example, what if we needed to determine if
@@ -753,7 +753,7 @@ expr1 -or expr2，并且表达式 expr1 的结果为真，那么就没有必要�
 表达式 expr1 -or expr2 为真。好，这样会执行快一些。为什么这个很重要？
 它很重要是因为我们能依靠这种行为来控制怎样来执行操作。我们会很快看到...
 
-### 预定义的操作
+# 预定义的操作
 
 Let’s get some work done! Having a list of results from our find command is useful,
 but what we really want to do is act on the items on the list. Fortunately, find allows
@@ -941,7 +941,7 @@ true) and then test for file type and the specified file extension.
 
 这个版本的命令会打印出每个文件（-print 行为总是为真），然后测试文件类型和指定的文件扩展名。
 
-### 用户定义的行为
+# 用户定义的行为
 
 In addition to the predefined actions, we can also invoke arbitrary commands. The
 traditional way of doing this is with the -exec action. This action works like this:
@@ -984,7 +984,7 @@ before the ls command is executed.
 在这个例子里面，我们搜索以字符串“foo”开头的文件名，并且对每个匹配的文件执行 ls -l 命令。
 使用 -ok 行为，会在 ls 命令执行之前提示用户。
 
-### 提高效率
+# 提高效率
 
 When the -exec action is used, it launches a new instance of the specified command
 each time a matching file is found. There are times when we might prefer to combine all
@@ -1034,7 +1034,7 @@ we get the same results, but the system only has to execute the ls command once.
 
 虽然我们得到一样的结果，但是系统只需要执行一次 ls 命令。
 
-#### xargs
+## xargs
 
 The xargs command performs an interesting function. It accepts input from standard
 input and converts it into an argument list for a specified command. With our example,
@@ -1101,7 +1101,7 @@ spaces in their names, are handled correctly.
 >
 > 使用这项技术，我们可以保证所有文件，甚至那些文件名中包含空格的文件，都能被正确地处理。
 
-### 返回操练场
+# 返回操练场
 
 It’s time to put find to some (almost) practical use. We’ll create a playground and try
 out some of what we have learned.
@@ -1248,7 +1248,7 @@ the operators and actions can be used together to perform useful tasks.
 而不是这一个长长的复合命令，但是很高兴知道，我们能这样执行命令。这里最重要的一点是要
 理解怎样把操作符和行为结合起来使用，来执行有用的任务。
 
-#### 选项
+## 选项
 
 Finally, we have the options. The options are used to control the scope of a find search.
 They may be included with other tests and actions when constructing find expressions.
@@ -1323,7 +1323,7 @@ systems and CD-ROMs.</td>
 </tr>
 </table>
 
-### 拓展阅读
+# 拓展阅读
 
 * The locate, updatedb, find, and xargs programs are all part the GNU
   Project’s findutils package. The GNU Project provides a website with

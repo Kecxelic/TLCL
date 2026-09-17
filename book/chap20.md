@@ -46,7 +46,7 @@ notations.
 POSIX 标准中描述的正则表达式（其包括了大多数的命令行工具），供我们讨论，
 与许多编程语言（最著名的 Perl 语言）相反，它们使用了更多和更丰富的符号集。
 
-### grep
+# grep
 
 The main program we will use to work with regular expressions is our old pal, grep.
 The name “grep” is actually derived from the phrase “global regular expression print,” so
@@ -206,7 +206,7 @@ could do this:
     dirlist-usr-bin.txt
     dirlist-usr-sbin.txt
 
-### 元字符和原义字符(Metacharacters And Literals)
+# 元字符和原义字符(Metacharacters And Literals)
 
 While it may not seem apparent, our grep searches have been using regular expressions
 all along, albeit very simple ones. The regular expression “bzip” is taken to mean that a
@@ -245,7 +245,7 @@ that they be enclosed in quotes to prevent the shell from attempting to expand t
 
 ---
 
-### 任何字符
+# 任何字符
 
 The first metacharacter we will look at is the dot or period character, which is used to
 match any character. If we include it in a regular expression, it will match any character
@@ -282,7 +282,7 @@ because the period character in the file extension is treated as “any characte
 中有一些文件的扩展名是.zip，则它们也会成为匹配项，因为文件扩展名中的圆点符号也会被看作是
 “任意字符”。
 
-### 锚点
+# 锚点
 
 The caret and dollar sign characters are treated as anchors in regular expressions.
 This means that they cause the match to occur only if the regular expression is found at
@@ -356,7 +356,7 @@ position.
 > 使用这个正则表达式，我们能在我们的字典文件中查找到包含五个字母，且第三个字母
 是“j”，最后一个字母是“r”的所有单词。
 
-### 中括号表达式和字符类
+# 中括号表达式和字符类
 
 In addition to matching any character at a given position in our regular expression, we
 can also match a single character from a specified set of characters by using bracket
@@ -387,7 +387,7 @@ is used to indicate a character range.
 然而，在两种情况下，会在中括号表达式中使用元字符，并且有着不同的含义。第一个元字符
 是插入字符（^），其被用来表示否定；第二个是连字符字符（-），其被用来表示一个字符范围。
 
-### 否定
+# 否定
 
 If the first character in a bracket expression is a caret (^), the remaining characters are
 taken to be a set of characters that must not be present at the given character position. We
@@ -423,7 +423,7 @@ the set.
 插入字符如果是中括号表达式中的第一个字符的时候，才会唤醒否定功能；否则，它会失去
 它的特殊含义，变成字符集中的一个普通字符。
 
-### 传统的字符区域
+# 传统的字符区域
 
 If we wanted to construct a regular expression that would find every file in our lists
 beginning with an upper case letter, we could do this:
@@ -479,7 +479,7 @@ will match every filename containing a dash, or a upper case “A” or an upper
 
 上面的表达式会匹配包含一个连字符，或一个大写字母“A”，或一个大写字母“Z”的文件名。
 
-### POSIX 字符集
+# POSIX 字符集
 
 The traditional character ranges are an easily understood and effective way to handle the
 problem of quickly specifying sets of characters. Unfortunately, they don’t always work.
@@ -782,7 +782,7 @@ ASCII) for its character set, so be sure if this is really what you want.
 >
 >  _export LANG=POSIX_
 
-### POSIX基本正则表达式 与 POSIX扩展正则表达式
+# POSIX基本正则表达式 与 POSIX扩展正则表达式
 
 Just when we thought this couldn’t get any more confusing, we discover that POSIX also
 splits regular expression implementations into two kinds: basic regular expressions
@@ -861,7 +861,7 @@ Stallman), and was adopted by the IEEE.
 操作系统中找到。“POSIX” 这个名字，象征着可移植的操作系统接口（为了时髦一点，添加了末尾的 “X” ），
 是由 Richard Stallman 建议的（ 是的，的确是 Richard Stallman ），后来被 IEEE 采纳。
 
-### 交替
+# 交替
 
 The first of the extended regular expression features we will discuss is called alternation,
 which is the facility that allows a match to occur from among a set of expressions. Just
@@ -931,14 +931,14 @@ changes to match any filename that begins with “bz” or contains “gz” or 
 
 会变成匹配任意以“bz”开头，或包含“gz”，或包含“zip”的文件名。
 
-### 限定符
+# 限定符
 
 Extended regular expressions support several ways to specify the number of times an
 element is matched.
 
 扩展的正则表达式支持几种方法，来指定一个元素被匹配的次数。
 
-#### ? - 匹配零个或一个元素
+## ? - 匹配零个或一个元素
 
 This quantifier means, in effect, “make the preceding element optional.” Let’s say we
 wanted to check a phone number for validity and we considered a phone number to be
@@ -981,7 +981,7 @@ match one containing non-numeric characters.
 
 这里我们看到这个表达式匹配这个电话号码的两种形式，但是不匹配包含非数字字符的号码。
 
-### \* - 匹配零个或多个元素
+# \* - 匹配零个或多个元素
 
 Like the ? metacharacter, the \* is used to denote an optional item; however, unlike the ?,
 the item may occur any number of times, not just once. Let’s say we wanted to see if a
@@ -1019,7 +1019,7 @@ leading uppercase character and trailing period.
 
 这个表达式匹配前两个测试语句，但不匹配第三个，因为第三个句子缺少开头的大写字母和末尾的句号。
 
-#### + - 匹配一个或多个元素
+## + - 匹配一个或多个元素
 
 The + metacharacter works much like the *, except it requires at least one instance of the
 preceding element to cause a match. Here is a regular expression that will only match
@@ -1044,7 +1044,7 @@ separates the characters “c” and “d”.
 我们看到这个正则表达式不匹配“a b 9”这一行，因为它包含了一个非字母的字符；它也不匹配
  “abc  d” ，因为在字符“c”和“d”之间不止一个空格。
 
-#### { } - 匹配特定个数的元素
+## { } - 匹配特定个数的元素
 
 The { and } metacharacters are used to express minimum and maximum numbers of
 required matches. They may be specified in four possible ways:
@@ -1127,14 +1127,14 @@ without the parentheses, while rejecting those numbers that are not properly for
 
 我们可以看到，修改后的表达式能成功地匹配带有和不带有圆括号的号码，而不匹配那些格式不正确的号码。
 
-### 让正则表达式工作起来
+# 让正则表达式工作起来
 
 Let’s look at some of the commands we already know and see how they can be used with
 regular expressions.
 
 让我们看看一些我们已经知道的命令，然后看一下它们怎样使用正则表达式。
 
-#### 通过 grep 命令来验证一个电话簿
+## 通过 grep 命令来验证一个电话簿
 
 In our earlier example, we looked at single phone numbers and checked them for proper
 formatting. A more realistic scenario would be checking a list of numbers instead, so
@@ -1194,7 +1194,7 @@ number, unlike our earlier phone number example.
 表达式自身的两端都包含定位点（锚）元字符，是为了确保这个号码的两端没有多余的字符。
 这个表达式也要求圆括号出现在一个有效的号码中，不同于我们先前电话号码的实例。
 
-#### 用 find 查找丑陋的文件名
+## 用 find 查找丑陋的文件名
 
 The find command supports a test based on a regular expression. There is an important
 consideration to keep in mind when using regular expressions in find versus grep.
@@ -1225,7 +1225,7 @@ pathname characters.
 由于要精确地匹配整个路径名，所以我们在表达式的两端使用了.\*，来匹配零个或多个字符。
 在表达式中间，我们使用了否定的中括号表达式，其包含了我们一系列可接受的路径名字符。
 
-#### 用 locate 查找文件
+## 用 locate 查找文件
 
 The locate program supports both basic (the -\-regexp option) and extended (the -\-
 regex option) regular expressions. With it, we can perform many of the same
@@ -1259,7 +1259,7 @@ Using alternation, we perform a search for pathnames that contain either bin/bz,
 
 通过使用 alternation，我们搜索包含 bin/bz，bin/gz，或/bin/zip 字符串的路径名。
 
-#### 在 less 和 vim 中查找文本
+## 在 less 和 vim 中查找文本
 
 less and vim both share the same method of searching for text. Pressing the / key
 followed by a regular expression will perform a search. If we use less to view our
@@ -1346,7 +1346,7 @@ a more complete version of vim.
 
 ---
 
-### 总结归纳
+# 总结归纳
 
 In this chapter, we’ve seen a few of the many uses of regular expressions. We can find
 even more if we use regular expressions to search for additional applications that use
@@ -1373,7 +1373,7 @@ back references, this feature will be discussed in the next chapter.
 
 基本正则表达式中有一个特性，我们没有涵盖。叫做反引用，这个特性在下一章中会被讨论到。
 
-### 拓展阅读
+# 拓展阅读
 
 There are many online resources for learning regular expressions, including various
 tutorials and cheat sheets.

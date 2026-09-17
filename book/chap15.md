@@ -44,7 +44,7 @@ impossible) to do with their graphical counterparts.
 提供了强大且精致的图形管理程序来维护系统，但是学习命令行程序也非常重要。因为它们
 可以完成许多让图形化管理程序处理起来困难（或者不可能）的任务。
 
-### 包管理系统
+# 包管理系统
 
 Different distributions use different packaging systems and as a general rule, a package
 intended for one distribution is not compatible with another distribution. Most
@@ -89,7 +89,7 @@ Mandriva, PCLinuxOS</td>
 </tr>
 </table>
 
-### 软件包管理系统是怎样工作的
+# 软件包管理系统是怎样工作的
 
 The method of software distribution found in the proprietary software industry usually
 entails buying a piece of installation media such as an "install disk" and then running an
@@ -108,7 +108,7 @@ Linux 不是这样。Linux 系统中几乎所有的软件都可以在互联网�
 包文件的形式提供，剩下的则以源码形式存在，可以手动安装。在后面章节里，我们将会谈谈怎样
 通过编译源码来安装软件。
 
-### 包文件
+# 包文件
 
 The basic unit of software in a packaging system is the package file. A package file is a
 compressed collection of files that comprise the software package. A package may
@@ -135,7 +135,7 @@ improve the program's integration with the other parts of the Linux distribution
 安装脚本。通常，软件包维护者要把所做的修改应用到最初的源码当中，来提高此软件与 Linux
 发行版其它部分的融合性。
 
-### 包仓库
+# 包仓库
 
 While some software projects choose to perform their own packaging and distribution,
 most packages today are created by the distribution vendors and interested third parties.
@@ -174,7 +174,7 @@ configuration files for the package management system.
 生效的国家中设立并分发资源。这些库通常完全地独立于它们所支持的包仓库，要想使用它们，
 你必须了解它们，手动地把它们包含到软件包管理系统的配置文件中。
 
-### 依赖性
+# 依赖性
 
 Programs seldom stand alone; rather, they rely on the presence of other software
 components to get their work done. Common activities, such as input/output for
@@ -190,7 +190,7 @@ are installed, too.
 序提供基本服务。如果一个软件包需要一些共享的资源，如一个动态链接库，它就被称作有一个依赖。
 现代的软件包管理系统都提供了一些依赖项解析方法，以确保安装软件包时，其所有的依赖也被安装。
 
-### 上层和底层软件包工具
+# 上层和底层软件包工具
 
 Package management systems usually consist of two types of tools: low-level tools which
 handle tasks such as installing and removing package files, and high-level tools that
@@ -247,7 +247,7 @@ Hat 企业版，和 CentOs 所使用的 yum 。其它 Red Hat 风格的发行版
 </tr>
 </table>
 
-### 常见软件包管理任务
+# 常见软件包管理任务
 
 There are many operations that can be performed with the command line package
 management tools. We will look at the most common. Be aware that the low-level tools
@@ -260,7 +260,7 @@ contains the package.
 支持软件包文件的创建，这个话题超出了本书叙述的范围。在以下的讨论中，"package_name"
 这个术语是指软件包实际名称，而不是指"package_file"，它是包含在软件包中的文件的名字。
 
-### 查找包仓库中的软件包
+# 查找包仓库中的软件包
 
 Using the high-level tools to search repository metadata, a package can be located based
 on its name or description.
@@ -306,7 +306,7 @@ used:
 
     yum search emacs
 
-### 从包仓库中安装一个软件包
+# 从包仓库中安装一个软件包
 
 High-level tools permit a package to be downloaded from a repository and installed with
 full dependency resolution.
@@ -351,7 +351,7 @@ Example: To install the emacs text editor from an apt repository:
 
     apt-get update; apt-get install emacs
 
-### 通过软件包文件来安装软件
+# 通过软件包文件来安装软件
 
 If a package file has been downloaded from a source other than a repository, it can be
 installed directly (though without dependency resolution) using a low-level tool.
@@ -409,7 +409,7 @@ dependency, rpm will exit with an error.
 
 ---
 
-### 卸载软件
+# 卸载软件
 
 Packages can be uninstalled using either the high-level or low-tools. The high-level tools
 are shown below.
@@ -454,7 +454,7 @@ Example: To uninstall the emacs package from a Debian-style system:
 
     apt-get remove emacs
 
-### 经过包仓库来更新软件包
+# 经过包仓库来更新软件包
 
 The most common package management task is keeping the system up-to-date with the
 latest packages. The high-level tools can perform this vital task in one single step.
@@ -505,7 +505,7 @@ system:
 
     apt-get update; apt-get upgrade
 
-### 经过软件包文件来升级软件
+# 经过软件包文件来升级软件
 
 If an updated version of a package has been downloaded from a non-repository source, it
 can be installed, replacing the previous version:
@@ -562,7 +562,7 @@ installing one as rpm does.
 ---
 
 
-### 列出所安装的软件包
+# 列出所安装的软件包
 
 These commands can be used to display a list of all the packages installed on the system:
 
@@ -600,7 +600,7 @@ These commands can be used to display a list of all the packages installed on th
 </tr>
 </table>
 
-### 确定是否安装了一个软件包
+# 确定是否安装了一个软件包
 
 These low-level tools can be used to display whether a specified package is installed:
 
@@ -644,7 +644,7 @@ Example: To determine if the emacs package is installed on a Debian style system
 
     dpkg --status emacs
 
-### 显示所安装软件包的信息
+# 显示所安装软件包的信息
 
 If the name of an installed package is known, the following commands can be used to
 display a description of the package:
@@ -689,7 +689,7 @@ Example: To see a description of the emacs package on a Debian-style system:
 
     apt-cache show emacs
 
-### 查找安装了某个文件的软件包
+# 查找安装了某个文件的软件包
 
 To determine what package is responsible for the installation of a particular file, the
 following commands can be used:
@@ -734,7 +734,7 @@ Example: To see what package installed the /usr/bin/vim file on a Red Hat system
 
     rpm -qf /usr/bin/vim
 
-### 总结归纳
+# 总结归纳
 
 In the chapters that follow, we will explore many different programs covering a wide
 range of application areas. While most of these programs are commonly installed by
@@ -821,7 +821,7 @@ items.
 不想在计算机中使用保密的设备，所以我建议删除这令人厌恶的硬件，
 把它和其它无用的东西都扔到垃圾桶里。
 
-### 拓展阅读
+# 拓展阅读
 
 Spend some time getting to know the package management system for your distribution.
 Each distribution provides documentation for its package management tools. In addition,

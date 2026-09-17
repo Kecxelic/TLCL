@@ -46,7 +46,7 @@ we will introduce the following commands:
 
 * tee - 从标准输入读取数据，并同时写到标准输出和文件
 
-### 标准输入stdin、标准输出stdout和标准错误输出stderr
+# 标准输入stdin、标准输出stdout和标准错误输出stderr
 
 Many of the programs that we have used so far produce output of some kind. This output
 often consists of two types. First, we have the program's results; that is, the data the
@@ -79,7 +79,7 @@ redirection, we can change that.
 I/O 重定向允许我们更改输出地点和输入来源。一般来说，输入来自键盘，输出送到屏幕，
 但是通过 I/O 重定向，我们可以做出改变。
 
-### 标准输出重定向符>和>>
+# 标准输出重定向符>和>>
 
 I/O redirection allows us to redefine where standard output goes. To redirect standard
 output to another file besides the screen, we use the ">" redirection operator followed by
@@ -183,7 +183,7 @@ We repeated the command three times resulting in an output file three times as l
 
 我们重复执行命令三次，导致输出文件大小是原来的三倍。
 
-### 标准错误输出重定向
+# 标准错误输出重定向
 
 Redirecting standard error lacks the ease of a dedicated redirection operator. To redirect
 standard error we must refer to its file descriptor. A program can produce output on any
@@ -206,7 +206,7 @@ the redirection of standard error to the file ls-error.txt.
 
 文件描述符"2"，紧挨着放在重定向操作符之前，来执行重定向标准错误输出到文件 ls-error.txt 任务。
 
-### 重定向标准输出和错误到同一个文件
+# 重定向标准输出和错误到同一个文件
 
 There are cases in which we may wish to capture all of the output of a command to a
 single file. To do this, we must redirect both standard output and standard error at the
@@ -261,7 +261,7 @@ standard error to the file ls-output.txt.
 
 在这个例子里面，我们使用单单一个表示法 &> 来重定向标准输出和错误到文件 ls-output.txt。
 
-### 处理不需要的输出
+# 处理不需要的输出
 
 Sometimes “silence is golden,” and we don't want output from a command, we just want
 to throw it away. This applies particularly to error and status messages. The system
@@ -287,7 +287,7 @@ see the Wikipedia article on “/dev/null”.
 > 数字存储桶是个古老的 Unix 概念，由于它的普遍性，它的身影出现在 Unix 文化的很多角落。当有人说我把你的评论送到/dev/null 了，现在你应该知道那是
 什么意思了。更多的例子，可以阅读 Wikipedia 关于"/dev/null"的文章。
 
-### 标准输入重定向
+# 标准输入重定向
 
 Up to now, we haven't encountered any commands that make use of standard input
 (actually we have, but we’ll reveal that surprise a little bit later), so we need to introduce
@@ -296,7 +296,7 @@ one.
 到目前为止，我们还没有遇到一个命令是利用标准输入的（实际上我们遇到过了，但是
 一会儿再揭晓谜底），所以我们需要介绍一个。
 
-### cat － 连接文件
+# cat － 连接文件
 
 The cat command reads one or more files and copies them to standard output like so:
 
@@ -415,7 +415,7 @@ Before we move on, check out the man page for cat, as it has several interesting
 
 在我们继续之前，请查看 cat 的手册页，因为它有几个有趣的选项。
 
-### 管道线
+# 管道线
 
 The ability of commands to read data from standard input and send to standard output is
 utilized by a shell feature called pipelines. Using the pipe operator “|” (vertical bar), the
@@ -442,7 +442,7 @@ of any command that produces standard output.
 
 这极其方便！使用这项技术，我们可以方便地检测会产生标准输出的任一命令的运行结果。
 
-### 过滤器
+# 过滤器
 
 Pipelines are often used to perform complex operations on data. It is possible to put
 several commands together into a pipeline. Frequently, the commands used this way are
@@ -465,7 +465,7 @@ we changed the data to produce a single, sorted list.
 各自针对一个目录。通过在管道线中包含 sort，我们改变输出数据，从而产生一个
 有序列表。
 
-### uniq - 报道或忽略重复行
+# uniq - 报道或忽略重复行
 
 The uniq command is often used in conjunction with sort. uniq accepts a sorted list
 of data from either standard input or a single filename argument (see the uniq man page
@@ -489,7 +489,7 @@ uniq like so:
 
     [me@linuxbox ~]$ ls /bin /usr/bin | sort | uniq -d | less
 
-### wc － 打印行数、字数和字节数
+# wc － 打印行数、字数和字节数
 
 The wc (word count) command is used to display the number of lines, words, and bytes
 contained in files. For example:
@@ -513,7 +513,7 @@ programs we have in our sorted list, we can do this:
     [me@linuxbox ~]$ ls /bin /usr/bin | sort | uniq | wc -l
     2728
 
-### grep － 打印匹配行
+# grep － 打印匹配行
 
 grep is a powerful program used to find text patterns within files. It's used like this:
 
@@ -550,7 +550,7 @@ grep to only print lines that do not match the pattern.
 grep 有一些方便的选项："-i"使得 grep 在执行搜索时忽略大小写（通常，搜索是大小写
 敏感的），"-v"选项会告诉 grep 只打印不匹配的行。
 
-### head / tail － 打印文件开头部分/结尾部分
+# head / tail － 打印文件开头部分/结尾部分
 
 Sometimes you don't want all of the output from a command. You may only want the
 first few lines or the last few lines. The head command prints the first ten lines of a file
@@ -596,7 +596,7 @@ appended, they immediately appear on the display. This continues until you type 
 使用"-f"选项，tail 命令继续监测这个文件，当新的内容添加到文件后，它们会立即
 出现在屏幕上。这会一直继续下去直到你输入 Ctrl-c。
 
-### tee － 从 Stdin 读取数据，并同时输出到 Stdout 和文件
+# tee － 从 Stdin 读取数据，并同时输出到 Stdout 和文件
 
 In keeping with our plumbing metaphor, Linux provides a command called tee which
 creates a “tee” fitting on our pipe. The tee program reads standard input and copies it to
@@ -617,7 +617,7 @@ contents:
     bzip2
     ....
 
-### 总结归纳
+# 总结归纳
 
 As always, check out the documentation of each of the commands we have covered in
 this chapter. We have only seen their most basic usage. They all have a number of

@@ -65,7 +65,7 @@ This chapter will revisit some old friends and introduce us to some new ones:
 
 * aspell – 交互式拼写检查器
 
-### 文本应用程序
+# 文本应用程序
 
 So far, we have learned a couple of text editors (nano and vim), looked a bunch of
 configuration files, and have witnessed the output of dozens of commands, all in text.
@@ -74,7 +74,7 @@ But what else is text used for? For many things, it turns out.
 到目前为止，我们已经知道了一对文本编辑器（nano 和 vim），看过一堆配置文件，并且目睹了
 许多命令的输出都是文本格式。但是文本还被用来做什么？ 它可以做很多事情。
 
-#### 文档
+## 文档
 
 Many people write documents using plain text formats. While it is easy to see how a
 small text file could be useful for keeping simple notes, it is also possible to write large
@@ -89,7 +89,7 @@ typographical layout needed by writers in technical disciplines.
 大的文档，然后使用一种标记语言来描述已完成文档的格式。许多科学论文就是用这种方法编写的，
 因为基于 Unix 的文本处理系统位于支持技术学科作家所需要的高级排版布局的一流系统之列。
 
-#### 网页
+## 网页
 
 The world’s most popular type of electronic document is probably the web page. Web
 pages are text documents that use either HTML (Hypertext Markup Language) or XML
@@ -99,7 +99,7 @@ format.
 世界上最流行的电子文档类型可能就是网页了。网页是文本文档，它们使用 HTML（超文本标记语言）或者是 XML
 （可扩展的标记语言）作为标记语言来描述文档的可视格式。
 
-#### 电子邮件
+## 电子邮件
 
 Email is an intrinsically text-based medium. Even non-text attachments are converted
 into a text representation for transmission. We can see this for ourselves by downloading
@@ -111,7 +111,7 @@ journey, followed by the body of the message with its content.
 我们能看到这些，通过下载一个 email 信息，然后用 less 来浏览它。我们将会看到这条信息开始于一个标题，
 其描述了信息的来源以及在传输过程中它接受到的处理，然后是信息的正文内容。
 
-#### 打印输出
+## 打印输出
 
 On Unix-like systems, output destined for a printer is sent as plain text or, if the page
 contains graphics, is converted into a text format page description language known as
@@ -121,7 +121,7 @@ PostScript, which is then sent to a program that generates the graphic dots to b
 一种文本格式的页面描述语言，以 PostScript 著称，然后再被发送给一款能产生图形点阵的程序，
 最后被打印出来。
 
-#### 程序源码
+## 程序源码
 
 Many of the command line programs found on Unix-like systems were created to support
 system administration and software development, and text processing programs are no
@@ -134,7 +134,7 @@ text format.
 许多文本处理程序被设计用来解决软件开发问题。文本处理对于软件开发者而言至关重要是因为所有的软件
 都起始于文本格式。源代码，程序员实际编写的一部分程序，总是文本格式。
 
-### 回顾一些老朋友
+# 回顾一些老朋友
 
 Back in Chapter 7 (Redirection), we learned about some commands that are able to
 accept standard input in addition to command line arguments. We only touched on them
@@ -144,7 +144,7 @@ processing.
 回到第7章（重定向），我们已经知道一些命令除了接受命令行参数之外，还能够接受标准输入。
 那时候我们只是简单地介绍了它们，但是现在我们将仔细地看一下它们是怎样被用来执行文本处理的。
 
-#### cat
+## cat
 
 The cat program has a number of interesting options. Many of them are used to help
 better visualize text content. One example is the -A option, which is used to display non-
@@ -247,7 +247,7 @@ much of a process to perform on text, it is a process.
 经由带有-ns 选项的 cat 程序处理之后，多余的空白行被删除，并且对保留的文本行进行编号。
 然而这并不是多个进程在操作这个文本，只有一个进程。
 
-#### sort
+## sort
 
 The sort program sorts the contents of standard input, or one or more files specified on
 the command line, and sends the results to standard output. Using the same technique
@@ -653,7 +653,7 @@ By specifying the colon character as the field separator, we can sort on the sev
 
 通过指定冒号字符做为字段分隔符，我们能按照第七个字段来排序。
 
-#### uniq
+## uniq
 
 Compared to sort, the uniq program is a lightweight. uniq performs a seemingly
 trivial task. When given a sorted file (including standard input), it removes any duplicate
@@ -792,14 +792,14 @@ the -c option:
             2 b
             2 c
 
-### 切片和切块
+# 切片和切块
 
 The next three programs we will discuss are used to peel columns of text out of files and
 recombine them in useful ways.
 
 下面我们将要讨论的三个程序用来从文件中获得文本列，并且以有用的方式重组它们。
 
-#### cut
+## cut
 
 The cut program is used to extract a section of text from a line and output the extracted
 section to standard output. It can accept multiple file arguments or input from standard
@@ -1017,7 +1017,7 @@ Using the -d option, we are able to specify the colon character as the field del
 
 使用-d 选项，我们能够指定冒号做为字段分隔符。
 
-#### paste
+## paste
 
 The paste command does the opposite of cut. Rather than extracting a column of text
 from a file, it adds one or more columns of text to a file. It does this by reading multiple
@@ -1096,7 +1096,7 @@ done simply by using paste and ordering its arguments in the desired arrangement
     05/31/2007	Fedora     7
     04/19/2007	Ubuntu     7.04
 
-#### join
+## join
 
 In some ways, join is like paste in that it adds columns to a file, but it uses a unique
 way to do it. A join is an operation usually associated with relational databases where
@@ -1214,7 +1214,7 @@ See the join man page for details.
 也要注意，默认情况下，join 命令使用空白字符做为输入字段的界定符，一个空格作为输出字段
 的界定符。这种行为可以通过指定的选项来修改。详细信息，参考 join 命令手册。
 
-### 比较文本
+# 比较文本
 
 It is often useful to compare versions of text files. For system administrators and
 software developers, this is particularly important. A system administrator may, for
@@ -1226,7 +1226,7 @@ been made to programs over time.
 一名系统管理员可能，例如，需要拿现有的配置文件与先前的版本做比较，来诊断一个系统错误。
 同样的，一名程序员经常需要查看程序的修改。
 
-#### comm
+## comm
 
 The comm program compares two text files and displays the lines that are unique to each
 one and the lines they have in common. To demonstrate, we will create two nearly
@@ -1274,7 +1274,7 @@ by both files, we would suppress the output of columns one and two:
     c
     d
 
-#### diff
+## diff
 
 Like the comm program, diff is used to detect the differences between files. However,
 diff is a much more complex tool, supporting many output formats and the ability to
@@ -1522,7 +1522,7 @@ possible characters:
 </tr>
 </table>
 
-#### patch
+## patch
 
 The patch program is used to apply changes to text files. It accepts output from diff
 and is generally used to convert older version of files into newer versions. Let’s consider
@@ -1604,7 +1604,7 @@ be used to analyze and edit patches.
 
 patch 程序有大量的选项，而且还有额外的实用程序可以被用来分析和编辑补丁。
 
-### 运行时编辑
+# 运行时编辑
 
 Our experience with text editors has been largely interactive, meaning that we manually
 move a cursor around, then type our changes. However, there are non-interactive ways to
@@ -1614,7 +1614,7 @@ with a single command.
 我们对于文本编辑器的经验是它们主要是交互式的，意思是我们手动移动光标，然后输入我们的修改。
 然而，也有非交互式的方法来编辑文本。有可能，例如，通过单个命令把一系列修改应用到多个文件中。
 
-#### tr
+## tr
 
 The tr program is used to transliterate characters. We can think of this as a sort of
 character-based search-and-replace operation. Transliteration is the process of changing
@@ -1743,7 +1743,7 @@ the squeezing will have no effect.
 
 那么挤压会没有效果。
 
-#### sed
+## sed
 
 The name sed is short for stream editor. It performs text editing on a stream of text,
 either a set of specified files or standard input. sed is a powerful and somewhat complex
@@ -2353,7 +2353,7 @@ awk 程序通常逐行处理文本文件，这点类似于 sed，awk 使用了�
 之后跟随编辑命令的概念相似。虽然关于 awk 和 perl 的内容都超出了本书所讨论的范围，
 但是对于 Linux 命令行用户来说，它们都是非常好的技能。
 
-#### aspell
+## aspell
 
 The last tool we will look at is aspell, an interactive spelling checker. The aspell
 program is the successor to an earlier program named ispell, and can be used, for the
@@ -2542,7 +2542,7 @@ for details.
 
 ---
 
-### 总结归纳
+# 总结归纳
 
 In this chapter, we have looked at a few of the many command line tools that operate on
 text. In the next chapter, we will look at several more. Admittedly, it may not seem
@@ -2558,7 +2558,7 @@ where these tools will really show their worth.
 了解决实际问题的基本工具箱。这将是确定无疑的，当我们学习 shell 脚本的时候，
 到时候这些工具将真正体现出它们的价值。
 
-### 拓展阅读
+# 拓展阅读
 
 The GNU Project website contains many online guides to the tools discussed in this chapter.
 
@@ -2602,7 +2602,7 @@ GNU 项目网站包含了本章中所讨论工具的许多在线指南。
 
 * 试试用 google 搜索 “sed one liners”, “sed cheat sheets” 关键字
 
-### 友情提示
+# 友情提示
 
 There are a few more interesting text manipulation commands worth investigating.
 Among these are: split (split files into pieces), csplit (split files into pieces based

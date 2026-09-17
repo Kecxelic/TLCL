@@ -15,7 +15,7 @@ enable it to do this by writing shell scripts.
 我们可以的。通过把我们的工具一起放置到我们自己设计的程序中, shell 就会自己来执行这些复杂的任务序列。
 通过编写 shell 脚本，我们可以让 shell 来做这些事情。
 
-### 什么是 Shell 脚本？
+# 什么是 Shell 脚本？
 
 In the simplest terms, a shell script is a file containing a series of commands. The shell
 reads this file and carries out the commands as though they have been entered directly on
@@ -40,7 +40,7 @@ not always) used when writing programs.
 虽然我们已经介绍了许多 shell 功能，但只是集中于那些经常直接在命令行中使用的功能。
 Shell 也提供了一些通常（但不总是）在编写程序时才使用的功能。
 
-### 怎样编写一个 Shell 脚本
+# 怎样编写一个 Shell 脚本
 
 To successfully create and run a shell script, we need to do three things:
 
@@ -71,7 +71,7 @@ For maximum convenience, we will place our scripts in these directories.
 1. _把脚本放置到 shell 能够找到的地方。_ 当没有指定可执行文件明确的路径名时，shell 会自动地搜索某些目录，
 来查找此可执行文件。为了最大程度的方便，我们会把脚本放到这些目录当中。
 
-### 脚本文件格式
+# 脚本文件格式
 
 In keeping with programming tradition, we’ll create a “hello world” program to
 demonstrate an extremely simple script. So let’s fire up our text editors and enter the
@@ -125,7 +125,7 @@ Let’s save our script file as hello_world.
 
 让我们把此脚本文件保存为 hello_world。
 
-### 可执行权限
+# 可执行权限
 
 The next thing we have to do is make our script executable. This is easily done using
 chmod:
@@ -145,7 +145,7 @@ readable in order to be executed.
 对于脚本文件，有两个常见的权限设置；权限为755的脚本，则每个人都能执行，和权限为700的
 脚本，只有文件所有者能够执行。注意为了能够执行脚本，脚本必须是可读的。
 
-### 脚本文件位置
+# 脚本文件位置
 
 With the permissions set, we can now execute our script:
 
@@ -240,7 +240,7 @@ Ubuntu 会自动地添加这个 ~/bin 目录到 PATH 变量中。所以在 Ubunt
 
 ---
 
-#### 脚本文件的好去处
+## 脚本文件的好去处
 
 The ~/bin directory is a good place to put scripts intended for personal use. If we write
 a script that everyone on a system is allowed to use, the traditional location is
@@ -256,7 +256,7 @@ Standard to contain only files supplied and maintained by the Linux distributor.
 而不是在 /bin 或 /usr/bin 目录下。这些目录都是由 Linux 文件系统层次结构标准指定，只包含由 Linux 发行商
 所提供和维护的文件。
 
-### 更多的格式技巧
+# 更多的格式技巧
 
 One of the key goals of serious script writing is ease of maintenance; that is, the ease
 with which a script may be modified by its author or others to adapt it to changing needs.
@@ -265,7 +265,7 @@ Making a script easy to read and understand is one way to facilitate easy mainte
 严肃认真的脚本书写的关键目标之一是为了易于维护；也就是说，一个脚本可以轻松地被作者或其它
 用户修改，使它适应变化的需求。使脚本容易阅读和理解是一种方便维护的方法。
 
-#### 长选项名称
+## 长选项名称
 
 Many of the commands we have studied feature both short and long option names. For
 instance, the ls command has many options that can be expressed in either short or long
@@ -289,7 +289,7 @@ provide improved readability.
 是等价的命令。为了减少输入，当在命令行中输入选项的时候，短选项更受欢迎，但是当书写脚本的时候，
 长选项能提供可读性。
 
-#### 缩进和行继续符
+## 缩进和行继续符
 
 When employing long commands, readability can be enhanced by spreading the
 command over several lines. In Chapter 18, we looked at a particularly long example of
@@ -386,7 +386,7 @@ leading colon characters) to your ~/.vimrc file.
 >
 > 通过把这些命令（没有开头的冒号字符）添加到你的 ~/.vimrc 文件中，这些改动会永久生效。
 
-### 总结归纳
+# 总结归纳
 
 In this first chapter of scripting, we have looked at how scripts are written and made to
 easily execute on our system. We also saw how we may use various formatting
@@ -398,7 +398,7 @@ in good script writing.
 我们也知道了怎样使用各种格式技巧来提高脚本的可读性（可维护性）。在以后的各章中，轻松维护
 会作为编写好脚本的中心法则一次又一次地出现。
 
-### 拓展阅读
+# 拓展阅读
 
 * For “Hello World” programs and examples in various programming languages, see:
 

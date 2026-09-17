@@ -71,7 +71,7 @@ We will look at the following commands:
 
 * md5sum – 计算 MD5检验码
 
-### 挂载和卸载存储设备
+# 挂载和卸载存储设备
 
 Recent advances in the Linux desktop have made storage device management extremely
 easy for desktop users. For the most part, we attach a device to our system and it “just
@@ -239,7 +239,7 @@ systems should be checked with the fsck command.</td>
 </tr>
 </table>
 
-### 查看挂载的文件系统列表
+# 查看挂载的文件系统列表
 
 The mount command is used to mount file systems. Entering the command without
 arguments will display a list of the file systems currently mounted:
@@ -462,7 +462,7 @@ file system corruption, one of the worst things that can happen on a computer.
 没有卸载设备，就移除了它，就有可能没有把注定要发送到设备中的数据输送完毕。在某些情况下，
 这些数据可能包含重要的目录更新信息，这将导致文件系统损坏，这是发生在计算机中的最坏的事情之一。
 
-### 确定设备名称
+# 确定设备名称
 
 It's sometimes difficult to determine the name of a device. Back in the old days, it wasn't
 very hard. A device was always in the same place and it didn't change. Unix-like
@@ -665,7 +665,7 @@ computer and the computer is not rebooted.
 
 这个设备名称会保持不变只要设备与计算机保持连接并且计算机不会重新启动。
 
-### 创建新的文件系统
+# 创建新的文件系统
 
 Let's say that we want to reformat the flash drive with a Linux native file system, rather
 than the FAT32 system it has now. This involves two steps: 1. (optional) create a new
@@ -686,7 +686,7 @@ formatting (i.e., erasing) the wrong drive!
 作为实验品，因为它将会被擦除！再次，请确定你指定了正确的系统设备名称。未能注意此
 警告可能导致你格式化（即擦除）错误的驱动器！
 
-### 用 fdisk 命令操作分区
+# 用 fdisk 命令操作分区
 
 The fdisk program allows us to interact directly with disk-like devices (such as hard
 disk drives and flash drives) at a very low level. With this tool we can edit, delete, and
@@ -795,7 +795,7 @@ the ominous sounding warning message.
 如果我们已经决定保持设备不变，可在提示符下输入"q"，这将退出程序而没有写更改。我们
 可以安全地忽略这些警告信息。
 
-### 用 mkfs 命令创建一个新的文件系统
+# 用 mkfs 命令创建一个新的文件系统
 
 With our partition editing done (lightweight though it might have been) it’s time to create
 a new file system on our flash drive. To do this, we will use mkfs (short for “make file
@@ -848,7 +848,7 @@ USB hard drives.
 只以一个小小的闪存驱动器为例，同样的操作可以被应用到内部硬盘和其它可移动的存储设备上，
 例如 USB 硬盘驱动器。
 
-### 测试和修复文件系统
+# 测试和修复文件系统
 
 In our earlier discussion of the /etc/fstab file, we saw some mysterious digits at the
 end of each line. Each time the system boots, it routinely checks the integrity of the file
@@ -902,7 +902,7 @@ where you are forced to run fsck.
 > 在 Unix 文化中，"fsck"这个单词往往会被用来指代另一个和它仅有一个字母差别的常用词。
 因为如果你遇到了迫不得已需要运行 fsck 命令的糟糕境遇时，这个词经常会脱口而出。
 
-### 格式化软盘
+# 格式化软盘
 
 For those of us still using computers old enough to be equipped with floppy diskette
 drives, we can manage those devices, too. Preparing a blank floppy for use is a two step
@@ -931,7 +931,7 @@ allocation tables. After a diskette is prepared, it may be mounted like other de
 注意我们使用这个“msdos”文件系统类型来得到旧（小的）风格的文件分配表。当一个软磁盘
 被准备好之后，则可能像其它设备一样挂载它。
 
-### 直接把数据移入/出设备
+# 直接把数据移入/出设备
 
 While we usually think of data on our computers as being organized into files, it is also
 possible to think of the data in “raw” form. If we look at a disk drive, for example, we
@@ -984,7 +984,7 @@ specifications before pressing enter!_
 
 ---
 
-### 创建 CD-ROM 映像
+# 创建 CD-ROM 映像
 
 Writing a recordable CD-ROM (either a CD-R or CD-RW) consists of two steps; first,
 constructing an iso image file that is the exact file system image of the CD-ROM and
@@ -993,7 +993,7 @@ second, writing the image file onto the CD-ROM media.
 写入一个可记录的 CD-ROM（一个 CD-R 或者是 CD-RW）由两步组成；首先，构建一个 iso 映像文件，
 这就是一个 CD-ROM 的文件系统映像，第二步，把这个映像文件写入到 CD-ROM 媒介中。
 
-#### 创建一个 CD-ROM 的映像拷贝
+## 创建一个 CD-ROM 的映像拷贝
 
 If we want to make an iso image of an existing CD-ROM, we can use dd to read all the
 data blocks off the CD-ROM and copy them to a local file. Say we had an Ubuntu CD
@@ -1014,7 +1014,7 @@ not use a file system for storage. For audio CDs, look at the cdrdao command.
 这项技术也适用于 DVD 光盘，但是不能用于音频 CD，因为它们不使用文件系统来存储数据。
 对于音频 CD，看一下 cdrdao 命令。
 
-#### 从文件集合中创建一个映像
+## 从文件集合中创建一个映像
 
 To create an iso image file containing the contents of a directory, we use the
 genisoimage program. To do this, we first create a directory containing all the files
@@ -1058,7 +1058,7 @@ genisoimage, respectively.
 这创建了一个与 GNU GPL 不相兼容的协议。结果，就 fork 了这个 cdrtools 项目，
 目前新项目里面包含了 cdrecord 和 mkisofs 的替代程序，分别是 wodim 和 genisoimage。
 
-### 写入 CD-ROM 镜像
+# 写入 CD-ROM 镜像
 
 After we have an image file, we can burn it onto our optical media. Most of the
 commands we will discuss below can be applied to both recordable CD-ROM and DVD
@@ -1067,7 +1067,7 @@ media.
 有了一个映像文件之后，我们可以把它烧写到光盘中。下面讨论的大多数命令对可
 记录的 CD-ROW 和 DVD 媒介都适用。
 
-#### 直接挂载一个 ISO 镜像
+## 直接挂载一个 ISO 镜像
 
 There is a trick that we can use to mount an iso image while it is still on our hard disk and
 treat it as though it was already on optical media. By adding the “-o loop” option to
@@ -1090,7 +1090,7 @@ image when it is no longer needed.
 image.iso 挂载到挂载点上。映像文件被挂载之后，可以把它当作是一张
 真正的 CD-ROM 或者 DVD。当不再需要此映像文件后，记得卸载它。
 
-#### 清除一张可重写入的 CD-ROM
+## 清除一张可重写入的 CD-ROM
 
 Rewritable CD-RW media needs to be erased or blanked before it can be reused. To do
 this, we can use wodim, specifying the device name for the CD writer and the type of
@@ -1102,7 +1102,7 @@ blanking to be performed. The wodim program offers several types. The most minim
 
     wodim dev=/dev/cdrw blank=fast
 
-#### 写入镜像
+## 写入镜像
 
 To write an image, we again use wodim, specifying the name of the optical media writer
 device and the name of the image file:
@@ -1121,7 +1121,7 @@ for recording music tracks.
 和 "－dao" 以 disk-at-once 模式写入光盘。如果你正在准备一张光盘为的是商业复制，那么应该使用这种模式。
 wodim 命令的默认模式是 track-at-once，这对于录制音乐很有用。
 
-### 拓展阅读
+# 拓展阅读
 
 We have just touched on the many ways that the command line can be used to manage
 storage media. Take a look at the man pages of the commands we have covered. Some
@@ -1133,7 +1133,7 @@ media.
 一些命令支持大量的选项和操作。此外，寻找一些如何添加硬盘驱动器到 Linux 系统（有许多）的在线教程，
 这些教程也要适用于光介质存储设备。
 
-### 友情提示
+# 友情提示
 
 It’s often useful to verify the integrity of an iso image that we have downloaded. In most
 cases, a distributor of an iso image will also supply a checksum file. A checksum is the

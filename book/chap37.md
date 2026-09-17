@@ -15,7 +15,7 @@ programming problems. We will cover them here.
 那些把 bash 集成到 Linux 发行版的程序有用处。然而还有一些特性，虽然不常用，
 但是对某些程序问题是很有帮助的。我们将在这里介绍它们。
 
-### 组命令和子 shell
+# 组命令和子 shell
 
 bash allows commands to be grouped together. This can be done in one of two ways;
 either with a group command or with a subshell. Here are examples of the syntax of each:
@@ -240,7 +240,7 @@ array elements.
 行29-40：这两个循环与文件列表循环相似，除了它们使用 “${!array[@]}” 展开，展开成数组索引的列表
 而不是数组元素的。
 
-#### 进程替换
+## 进程替换
 
 While they look similar and can both be used to combine streams for redirection, there is
 an important difference between group commands and subshells. Whereas a group command
@@ -367,7 +367,7 @@ When executed, the script produces output like this:
     Owner: me
     Group: me
 
-### 陷阱
+# 陷阱
 
 In Chapter 10, we saw how programs can respond to signals. We can add this capability
 to our scripts, too. While the scripts we have written so far have not needed this capabil-
@@ -548,7 +548,7 @@ home directory, with a line of code such as this:
 >
 >  _[[ -d $HOME/tmp ]] \|\| mkdir $HOME/tmp_
 
-### 异步执行
+# 异步执行
 
 It is sometimes desirable to perform more than one task at the same time. We have seen
 how all modern operating systems are at least multitasking if not multiuser as well.
@@ -574,7 +574,7 @@ script) finishes.
 bash 有一个内置命令，能帮助管理诸如此类的异步执行的任务。wait 命令导致一个父脚本暂停运行，直到一个
 特定的进程（例如，子脚本）运行结束。
 
-#### 等待
+## 等待
 
 We will demonstrate the wait command first. To do this, we will need two scripts, a par-
 ent script:
@@ -636,7 +636,7 @@ When executed, the parent and child scripts produce the following output:
     Parent: child is finished. Continuing...
     Parent: parent is done. Exiting.
 
-### 命名管道
+# 命名管道
 
 In most Unix-like systems, it is possible to create a special type of file called a named
 pipe. Named pipes are used to create a connection between two processes and can be
@@ -681,7 +681,7 @@ and it will behave as if:
 
     process1 | process2
 
-#### 设置一个命名管道
+## 设置一个命名管道
 
 First, we must create a named pipe. This is done using the mkfifo command:
 
@@ -700,7 +700,7 @@ indicating that it is a named pipe.
 这里我们使用 mkfifo 创建了一个名为 pipe1 的命名管道。使用 ls 命令，我们查看这个文件，
 看到位于属性字段的第一个字母是 “p”，表明它是一个命名管道。
 
-#### 使用命名管道
+## 使用命名管道
 
 To demonstrate how the named pipe works, we will need two terminal
 windows (or alternately, two virtual consoles). In the first terminal,
@@ -729,7 +729,7 @@ successfully completes once it is no longer blocked.
 然后产自第一个终端窗口的目录列表出现在第二个终端中，并作为来自 cat 命令的输出。在第一个终端
 窗口中的 ls 命令一旦它不再阻塞，会成功地结束。
 
-### 总结
+# 总结
 
 Well, we have completed our journey. The only thing left to do now is practice, practice,
 practice. Even though we covered a lot of ground in our trek, we barely scratched
@@ -740,7 +740,7 @@ programs left to be discovered and enjoyed. Start digging around in /usr/bin and
 纵然在我们的长途跋涉中，我们涉及了很多命令，但是就命令行而言，我们只是触及了它的表面。
 仍留有成千上万的命令行程序，需要去发现和享受。开始挖掘 /usr/bin 目录吧，你将会看到！
 
-### 拓展阅读
+# 拓展阅读
 
 * The “Compound Commands” section of the bash man page contains a full
 description of group command and subshell notations.

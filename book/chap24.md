@@ -50,7 +50,7 @@ We will introduce one new command:
 
 * make - 维护程序的工具
 
-### 什么是编译？
+# 什么是编译？
 
 Simply put, compiling is the process of translating source code (the
 human-readable description of a program written by a programmer)
@@ -123,7 +123,7 @@ The final result of this process is the executable program file, ready for use.
 一个叫做链接器的程序用来在编译器的输出结果和要编译的程序所需的库之间建立连接。这个过程的最终结果是
 一个可执行程序文件，准备使用。
 
-#### 所有的程序都是可编译的吗？
+## 所有的程序都是可编译的吗？
 
 No. As we have seen, there are programs such as shell scripts that do not require compiling.
 They are executed directly. These are written in what are known as scripting or
@@ -157,7 +157,7 @@ quite long. Interpreted languages remove the compilation step and thus speed up 
 要比编译程序快速且容易。通常程序开发需要经历一个不断重复的写码、编译和测试周期。随着程序变得越来越大，
 编译阶段会变得相当耗时。解释型语言删除了编译步骤，这样就加快了程序开发。
 
-### 编译一个 C 语言
+# 编译一个 C 语言
 
 Let’s compile something. Before we do that however, we’re going to need some
 tools like the compiler, the linker, and make. The C compiler used almost
@@ -189,7 +189,7 @@ exercise below.
 
 ---
 
-#### 得到源码
+## 得到源码
 
 For our compiling exercise, we are going to compile a program from the GNU Project
 called diction. This is a handy little program that checks text files for writing quality
@@ -284,7 +284,7 @@ following command to examine the contents of the tar file:
     tar tzvf tarfile | head
 ---
 
-### 检查源码树
+# 检查源码树
 
 Unpacking the tar file results in the creation of a new directory, named diction-1.11.
 This directory contains the source tree. Let’s look inside:
@@ -374,7 +374,7 @@ The header files in this directory were installed when we installed the compiler
 
 当我们安装编译器的时候，这个目录中的头文件会被安装。
 
-#### 构建程序
+## 构建程序
 
 Most programs build with a simple, two-command sequence:
 
@@ -579,7 +579,7 @@ undergoes continuous modification and improvement) contains several million line
 make 程序这种智能地只构建所需要构建的内容的特性，对程序来说，是巨大的福利。虽然在我们的小项目中，节省的时间可能
 不是非常明显，在庞大的工程中，它具有非常重大的意义。记住，Linux 内核（一个经历着不断修改和改进的程序）包含了几百万行代码。
 
-#### 安装程序
+## 安装程序
 
 Well-packaged source code will often include a special make target called install.
 This target will install the final product in a system directory for use.
@@ -605,7 +605,7 @@ And there we have it!
 
 完美！
 
-### 总结
+# 总结
 
 In this chapter, we have seen how three simple commands:
 
@@ -622,7 +622,7 @@ task that needs to maintain a target/dependency relationship, not just for compi
 可以用来构建许多源码包。我们也知道了在程序维护过程中，make 程序起到了举足轻重的作用。make 程序可以用到
 任何需要维护一个目标/依赖关系的任务中，不仅仅为了编译源代码。
 
-### 拓展阅读
+# 拓展阅读
 
 * The Wikipedia has good articles on compilers and the make program:
 
