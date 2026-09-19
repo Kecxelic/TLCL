@@ -489,6 +489,7 @@ scheme used to store the file mode. This table shows what we mean:
 
 
 |Octal| Binary | File Mode|
+|---|---|---|
 |0 | 000 | -\-\-|
 |1 | 001 | -\-x|
 |2 | 010 | -w-|
@@ -732,6 +733,7 @@ what happens:
 相比较，看看有什么区别：
 
 |Original file mode | -\-\- rw- rw- rw-|
+|---|---|---|
 |Mask | 000 000 000 010|
 |Result | -\-- rw- rw- r-\-|
 
@@ -747,6 +749,7 @@ does:
 掩码0022的作用：
 
 |Original file mode | -\-\- rw- rw- rw-|
+|---|---|---|
 |Mask | 000 000 010 010|
 |Result | -\-- rw- r-\- r-\-|
 
