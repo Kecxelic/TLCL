@@ -253,7 +253,7 @@ everybody else:
 
 剩下的九个字符叫做文件模式，代表着文件所有者、文件组所有者和其他人的读、写和执行权限。
 
-![](images/101.png) \\
+![101](https://tuchuang-1402951109.cos.ap-guangzhou.myqcloud.com/2026/09/19/JXXId1ttZxTMM2xHrBM6images/101.png) \\
 图 1: 权限属性
 {: .figure}
 
@@ -669,7 +669,7 @@ Here is an example from KDE 3.5:
 权限对话框。在 Nautilus (GNOME)和 Konqueror
 (KDE)中，右击一个文件或目录图标将会弹出一个属性对话框。下面这个例子来自 KDE 3.5：
 
-![](images/102.png) \\
+![102](https://tuchuang-1402951109.cos.ap-guangzhou.myqcloud.com/2026/09/19/1XRgNFUJtKkEwg2ZzPIfimages/102.png) \\
 图 2: KDE 3.5 文件属性对话框
 {: .figure}
 
@@ -1192,7 +1192,7 @@ called music and adds users bill and karen to it:
 我们需要做的第一件事，是创建一个以 bill 和 karen 为成员的用户组。使用图形化的用户管理工具，
 bill 创建了一个叫做 music 的用户组，并且把用户 bill 和 karen 添加到用户组 music 中：
 
-![](images/103.png) \\
+![103](https://tuchuang-1402951109.cos.ap-guangzhou.myqcloud.com/2026/09/19/W671a0BhBi9dGzqVShfgimages/103.png) \\
 图 3: 用 GNOME 创建一个新的用户组
 {: .figure}
 

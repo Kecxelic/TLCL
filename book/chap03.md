@@ -56,7 +56,7 @@ represents the file system tree as in Figure 1. Notice that the tree is
 usually shown upended, that is, with the root at the top and the various
 branches descending below.
 
-![](images/3.png) \\
+![3](https://tuchuang-1402951109.cos.ap-guangzhou.myqcloud.com/2026/09/19/X4uVLE31LiCGydX6Om3Aimages/3.png) \\
 图1: 由图形化文件管理器显示的文件系统树
 {: .figure}
 
